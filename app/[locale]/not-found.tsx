@@ -14,10 +14,17 @@ export default async function NotFoundPage() {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[35%_center]"
+        className="object-cover object-left"
       />
       <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/40 to-black/95" />
       <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/35" />
+      <div aria-hidden="true" className="not-found-smoke">
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
 
       <section className="relative z-10 mx-auto w-full max-w-7xl">
         <div className="ml-auto max-w-xl text-center lg:text-left">

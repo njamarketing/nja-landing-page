@@ -402,6 +402,75 @@ h4 {
   color: rgba(62, 229, 250, 0.84);
 }
 
+.not-found-smoke {
+  position: absolute;
+  z-index: 1;
+  bottom: 30%;
+  left: clamp(1.25rem, 6vw, 6.5rem);
+  height: 8.5rem;
+  width: 5rem;
+  pointer-events: none;
+}
+
+.not-found-smoke span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 4.2rem;
+  width: 1.85rem;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(231, 245, 255, 0.78) 0%, rgba(132, 204, 255, 0.35) 44%, transparent 74%);
+  filter: blur(7px);
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: notFoundSmoke 4.2s ease-out infinite;
+}
+
+.not-found-smoke span:nth-child(2) {
+  height: 5rem;
+  width: 2.2rem;
+  animation-delay: 0.84s;
+}
+
+.not-found-smoke span:nth-child(3) {
+  height: 3.5rem;
+  width: 1.45rem;
+  animation-delay: 1.68s;
+}
+
+.not-found-smoke span:nth-child(4) {
+  height: 4.6rem;
+  width: 1.65rem;
+  animation-delay: 2.52s;
+}
+
+.not-found-smoke span:nth-child(5) {
+  height: 3.1rem;
+  width: 1.25rem;
+  animation-delay: 3.36s;
+}
+
+@keyframes notFoundSmoke {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0) scale(0.58);
+  }
+
+  16% {
+    opacity: 0.82;
+  }
+
+  58% {
+    opacity: 0.4;
+    transform: translateX(calc(-50% + 1.15rem)) translateY(-4.1rem) scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(calc(-50% - 0.9rem)) translateY(-8.2rem) scale(1.72);
+  }
+}
+
 .landing-avatar {
   display: inline-flex;
   height: 3rem;
@@ -583,6 +652,10 @@ h4 {
     transform: none;
     box-shadow: none;
   }
+
+  .not-found-smoke {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -594,9 +667,14 @@ h4 {
   .landing-button,
   .landing-shuriken,
   .landing-feedback-marquee,
-  .landing-logo-marquee {
+  .landing-logo-marquee,
+  .not-found-smoke span {
     transition: none;
     animation: none;
+  }
+
+  .not-found-smoke span {
+    opacity: 0.24;
   }
 
   .landing-solution-card-inner {
