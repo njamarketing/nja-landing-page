@@ -21,7 +21,6 @@ components/
 i18n/
 messages/
 utils/
-  storeLinks.ts
 ```
 
 ## Desenvolvimento
