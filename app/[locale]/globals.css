@@ -657,9 +657,6 @@ h4 {
     box-shadow: none;
   }
 
-  .not-found-smoke {
-    display: none;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
