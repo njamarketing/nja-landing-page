@@ -20,7 +20,7 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
     };
 
     lenis = createLenis();
-    (window as Window & { lenis?: LenisInstance }).lenis = lenis;
+    window.njaLenis = lenis;
     frameId = requestAnimationFrame(raf);
 
     const handleVisibilityChange = () => {
@@ -37,7 +37,7 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       cancelAnimationFrame(frameId);
       lenis?.destroy();
-      delete (window as Window & { lenis?: LenisInstance }).lenis;
+      delete window.njaLenis;
     };
   }, []);
 

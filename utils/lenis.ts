@@ -17,3 +17,9 @@ export function createLenis(options?: ConstructorParameters<typeof Lenis>[0]) {
 }
 
 export type LenisInstance = ReturnType<typeof createLenis>;
+
+declare global {
+  interface Window {
+    njaLenis?: LenisInstance;
+  }
+}

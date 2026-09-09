@@ -23,7 +23,7 @@ type PortfolioProject = {
   category: string;
   title: string;
   description: string;
-  services: string[];
+  services: readonly string[];
   highlight: string;
   highlightLabel: string;
   image: string;
@@ -560,7 +560,7 @@ export async function generateMetadata({ params }: PortfolioPageProps): Promise<
 export default async function PortfolioPage({ params }: PortfolioPageProps) {
   const { locale } = await params;
   const copy = portfolioCopy[locale as keyof typeof portfolioCopy] ?? portfolioCopy.pt;
-  const projects: PortfolioProject[] =
+  const projects: readonly PortfolioProject[] =
     portfolioProjects[locale as keyof typeof portfolioProjects] ?? portfolioProjects.pt;
   const homeT = await getTranslations({ locale, namespace: "HomePage" });
   const heroCards = homeT.raw("hero.cards") as HeroCard[];

@@ -5,7 +5,6 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import type { CSSProperties } from "react";
 import { useEffect, useRef } from "react";
 import SectionReveal from "@/components/landing/SectionReveal";
-import type { LenisInstance } from "@/utils/lenis";
 
 type AboutHeroSectionProps = {
   titleBefore: string;
@@ -49,7 +48,7 @@ export default function AboutHeroSection({
 
     const frameId = requestAnimationFrame(() => {
       const section = sectionRef.current;
-      const lenis = window.lenis as unknown as LenisInstance | undefined;
+      const lenis = window.njaLenis;
 
       if (!section || !lenis) {
         return;
@@ -65,7 +64,7 @@ export default function AboutHeroSection({
       cancelAnimationFrame(frameId);
       observer?.disconnect();
 
-      const lenis = window.lenis as unknown as LenisInstance | undefined;
+      const lenis = window.njaLenis;
 
       if (lenis) {
         lenis.options.wheelMultiplier = 1;
