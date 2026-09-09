@@ -676,5 +676,11 @@
         }
       ]
     }
+  },
+  "NotFound": {
+    "eyebrow": "Caminho não encontrado",
+    "title": "Ops! Você encontrou uma rota sem saída.",
+    "description": "Nossa equipe ninja já está traçando o caminho de volta. Retorne ao início e continue sua jornada com a NJA.",
+    "cta": "Voltar ao início"
   }
 }

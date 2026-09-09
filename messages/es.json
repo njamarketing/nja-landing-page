@@ -680,5 +680,11 @@
     "result_back": "Volver al inicio",
     "error_generic": "Ocurrió un error. Inténtalo de nuevo.",
     "error_title": "Error"
+  },
+  "NotFound": {
+    "eyebrow": "Ruta no encontrada",
+    "title": "¡Ups! Encontraste un callejón sin salida.",
+    "description": "Nuestro equipo ninja ya está trazando el camino de vuelta. Regresa al inicio y continúa tu recorrido con NJA.",
+    "cta": "Volver al inicio"
   }
 }

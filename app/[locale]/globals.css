@@ -538,7 +538,7 @@ h4 {
 }
 
 .landing-logo-marquee {
-  animation: landingLogoMarquee 34s linear infinite;
+  animation: landingLogoMarquee 55s linear infinite;
   will-change: transform;
 }
 

@@ -680,5 +680,11 @@
     "result_back": "Back to start",
     "error_generic": "An error occurred. Please try again.",
     "error_title": "Error"
+  },
+  "NotFound": {
+    "eyebrow": "Path not found",
+    "title": "Oops! You found a dead end.",
+    "description": "Our ninja team is already mapping the way back. Return to the start and continue your journey with NJA.",
+    "cta": "Back to start"
   }
 }
