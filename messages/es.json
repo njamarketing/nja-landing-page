@@ -1,0 +1,684 @@
+{
+  "Header": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "how": "Cómo funciona",
+    "benefits": "Beneficios",
+    "feedbacks": "Reseñas",
+    "contact": "Contacto",
+    "download": "Descargar ahora",
+    "language": "Idioma"
+  },
+  "HomePage": {
+    "seo": {
+      "title": "NJA Consultoría y Marketing | Estrategia que genera crecimiento real",
+      "description": "Nueve años en el mercado y más de 500 clientes atendidos. NJA convierte el marketing en crecimiento real para empresas de todos los tamaños."
+    },
+    "nav": {
+      "home": "Inicio",
+      "solutions": "Soluciones",
+      "about": "Sobre",
+      "brand": "Marca",
+      "franchises": "Franquicias",
+      "videoMomentum": "Video Momentum",
+      "cases": "Casos",
+      "feedback": "Opiniones",
+      "cta": "Habla con nosotros",
+      "portfolio": "Portafolio"
+    },
+    "hero": {
+      "badge": "9 años. Más de 500 clientes. Resultado real.",
+      "titleBefore": "NJA Consultoría y Marketing,",
+      "titleHighlight": "9 años en el mercado",
+      "titleAfter": "trabajando en alianza con el emprendedor.",
+      "lead": "Más de 500 clientes atendidos a lo largo de nuestra trayectoria.",
+      "description": "Si tienes un negocio pequeño, mediano o grande y sientes que tu producto o servicio todavía no está posicionado como debería, NJA es para ti.",
+      "primaryCta": "Entrar en contacto",
+      "secondaryCta": "Ver soluciones",
+      "stats": {
+        "clientsValue": "+500",
+        "clientsLabel": "Clientes atendidos",
+        "yearsValue": "9",
+        "yearsLabel": "Años en el mercado",
+        "focusValue": "360",
+        "focusLabel": "Visión estratégica"
+      },
+      "cards": [
+        {
+          "label": "Google Ads",
+          "image": "/images/landing/hero-google-ads.jpg",
+          "span": "col-span-6 row-span-2",
+          "offset": "-mt-10 sm:-mt-16"
+        },
+        {
+          "label": "Google Maps",
+          "image": "/images/landing/hero-maps.webp",
+          "span": "col-span-6 row-span-1"
+        },
+        {
+          "label": "Meta Ads",
+          "image": "/images/landing/hero-meta-ads.jpg",
+          "span": "col-span-6 row-span-1"
+        },
+        {
+          "label": "SEO",
+          "image": "/images/landing/hero-seo.webp",
+          "span": "col-span-3 row-span-1"
+        },
+        {
+          "label": "Social Media",
+          "image": "/images/landing/hero-social.jpg",
+          "span": "col-span-3 row-span-1"
+        },
+        {
+          "label": "Branding",
+          "image": "/images/landing/hero-branding.webp",
+          "span": "col-span-6 row-span-1"
+        },
+        {
+          "label": "Consultoría",
+          "image": "/images/landing/hero-consulting.webp",
+          "span": "col-span-3 row-span-1",
+          "offset": "mb-10 sm:mb-16"
+        },
+        {
+          "label": "Sitios web",
+          "image": "/images/landing/hero-web.jpg",
+          "span": "col-span-3 row-span-1",
+          "offset": "mb-10 sm:mb-16"
+        }
+      ]
+    },
+    "trustedBrands": {
+      "eyebrow": "Alianzas que generan resultados",
+      "title": "Marcas que confían en NJA",
+      "description": "Alianzas construidas con estrategia, creatividad y enfoque en resultados reales."
+    },
+    "solutions": {
+      "badge": "Soluciones de marketing",
+      "titleBefore": "Convertimos el marketing en",
+      "titleHighlight": "crecimiento real",
+      "titleAfter": "para tu negocio",
+      "description": "Cada estrategia responde a una necesidad concreta. Identificamos el momento de tu empresa y aplicamos las acciones correctas para generar visibilidad, oportunidades y ventas.",
+      "doingLabel": "Qué hacemos",
+      "resultLabel": "Resultado esperado",
+      "items": [
+        {
+          "title": "Presencia local y generación de clientes",
+          "audience": "Para empresas que dependen de clientes de la región y quieren aumentar el movimiento en la tienda o recibir más contactos.",
+          "doing": "Optimización de Google Maps, gestión de reputación, posicionamiento local y campañas geolocalizadas.",
+          "result": "Más llamadas, mensajes, solicitudes de ruta y visitas presenciales."
+        },
+        {
+          "title": "Captación inmediata de leads y ventas",
+          "audience": "Para empresas que necesitan generar oportunidades rápidamente y acelerar el crecimiento.",
+          "doing": "Campañas en Google Ads y Meta Ads enfocadas en conversión.",
+          "result": "Más presupuestos, contactos cualificados y ventas a corto plazo."
+        },
+        {
+          "title": "Construcción de marca y autoridad",
+          "audience": "Para empresas que quieren destacarse de la competencia y fortalecer su presencia digital.",
+          "doing": "Planificación de contenidos, gestión de redes sociales y posicionamiento estratégico.",
+          "result": "Más reconocimiento, confianza e interacción del público."
+        },
+        {
+          "title": "Crecimiento orgánico a largo plazo",
+          "audience": "Para empresas que desean reducir la dependencia de anuncios y generar demanda constante.",
+          "doing": "SEO, optimización del sitio y producción de contenido estratégico.",
+          "result": "Más visitantes cualificados desde Google de forma continua."
+        },
+        {
+          "title": "Estrategia e integración de marketing",
+          "audience": "Para empresas que ya invierten en marketing, pero todavía no logran convertir acciones en resultados consistentes.",
+          "doing": "Diagnóstico, planificación, definición de prioridades e integración entre tráfico pago, SEO y redes sociales.",
+          "result": "Inversiones más eficientes y crecimiento más previsible."
+        },
+        {
+          "title": "Branding y posicionamiento de marca",
+          "audience": "Para empresas que necesitan fortalecer la identidad, la percepción de valor y la claridad en la comunicación con el público.",
+          "doing": "Dirección de marca, construcción de identidad visual, definición de mensaje y alineación de la presencia digital.",
+          "result": "Una marca más memorable, coherente y preparada para generar conexión y diferenciación en el mercado."
+        }
+      ]
+    },
+    "about": {
+      "badge": "Sobre NJA",
+      "titleBefore": "Inteligencia de bastidor con",
+      "titleHighlight": "ejecución precisa",
+      "titleAfter": "para marcas listas para crecer",
+      "description": "La dirección visual y textual del hub fue llevada a esta landing institucional. Aquí, NJA se presenta como un socio estratégico para empresas que necesitan más claridad en posicionamiento, adquisición y crecimiento.",
+      "highlightLabel": "Bastidor",
+      "highlightValue": "Inteligencia, precisión y velocidad",
+      "imageAlt": "Equipo de NJA Consultoría y Marketing"
+    },
+    "visualShowcase": {
+      "badge": "Dirección visual destacada",
+      "titleBefore": "Un adelanto del tipo de",
+      "titleHighlight": "impacto visual",
+      "titleAfter": "que NJA puede construir",
+      "description": "Antes de los casos completos, esta secciÃ³n presenta composiciones de ejemplo con un lenguaje mÃ¡s editorial y presencia de marca. Las imÃ¡genes todavÃ­a son placeholders y luego serÃ¡n sustituidas por los visuales reales."
+    },
+    "cases": {
+      "badge": "Casos",
+      "titleHighlight": "Casos",
+      "titleAfter": "en construcción",
+      "description": "La sección mantiene el mismo espíritu del proyecto original y deja la landing lista para recibir pruebas reales y resultados de clientes.",
+      "footer": "Resultados reales de clientes",
+      "items": [
+        {
+          "label": "Caso 01",
+          "title": "Próximamente",
+          "description": "Espacio reservado para presentar evolución de rendimiento, posicionamiento y crecimiento comercial de clientes de NJA."
+        },
+        {
+          "label": "Caso 02",
+          "title": "Próximamente",
+          "description": "Listo para recibir indicadores, contexto del proyecto e impacto comercial de cada estrategia aplicada."
+        },
+        {
+          "label": "Caso 03",
+          "title": "Próximamente",
+          "description": "Estructura preparada para destacar números, aprendizajes y diferenciales con claridad."
+        }
+      ]
+    },
+    "feedback": {
+      "badge": "Opiniones",
+      "titleHighlight": "Opiniones",
+      "titleAfter": "de clientes",
+      "description": "La base visual del hub se conservó y la sección quedó lista para recibir testimonios reales en cuanto sean aprobados.",
+      "items": [
+        {
+          "name": "Nombre del cliente",
+          "company": "Empresa",
+          "text": "Espacio reservado para incluir un testimonio sobre atención, estrategia y resultados alcanzados con NJA."
+        },
+        {
+          "name": "Nombre del cliente",
+          "company": "Empresa",
+          "text": "Estructura lista para destacar confianza, acompañamiento cercano y percepción de valor del proyecto."
+        },
+        {
+          "name": "Nombre del cliente",
+          "company": "Empresa",
+          "text": "En cuanto los testimonios estén aprobados, esta área ya estará preparada para la publicación final."
+        }
+      ]
+    },
+    "cta": {
+      "badge": "Análisis estratégico sin compromiso",
+      "titleBefore": "Descubre las",
+      "titleHighlight": "mayores oportunidades",
+      "titleAfter": "de crecimiento de tu empresa",
+      "description": "Agenda un análisis inicial y recibe una visión clara de lo que está funcionando, de lo que debe corregirse y de qué estrategias pueden generar más clientes para tu negocio.",
+      "button": "Agendar análisis gratuito"
+    },
+    "footer": {
+      "description": "Estrategia, tecnología e inteligencia en segúndo plano para generar crecimiento real para tu negocio.",
+      "navigationTitle": "Navegación",
+      "contactTitle": "Contacto",
+      "email": "contato@nja.com.br",
+      "phone": "+55 (00) 0000-0000",
+      "rights": "© 2026 NJA Consultoría y Marketing. Todos los derechos reservados.",
+      "privacy": "Privacidad",
+      "terms": "Términos"
+    }
+  },
+  "AboutPage": {
+    "seo": {
+      "title": "Sobre nosotros | NJA ConsultorÃ­a y Marketing",
+      "description": "Conoce cÃ³mo NJA combina estrategia, ejecuciÃ³n y seguimiento cercano para convertir el marketing en crecimiento real."
+    },
+    "hero": {
+      "badge": "Sobre nosotros",
+      "titleBefore": "Crecimiento con",
+      "titleHighlight": "claridad y direcciÃ³n",
+      "titleAfter": "",
+      "description": "Posicionamiento, presencia y estrategia para marcas que quieren crecer de la manera correcta.",
+      "primaryCta": "Hablar con NJA",
+      "secondaryCta": "Volver al inicio",
+      "imageAlt": "Equipo de NJA reunido en un entorno de trabajo",
+      "commitments": [
+        "Entramos para entender dÃ³nde la marca estÃ¡ trabada y quÃ© necesita ganar fuerza primero.",
+        "Conectamos presencia, trÃ¡fico y posicionamiento en una sola lectura del negocio.",
+        "Ajustamos la ruta de cerca, sin dejar que la estrategia muera en la ejecuciÃ³n."
+      ],
+      "narrative": {
+        "label": "Nuestro papel",
+        "title": "Convertir el marketing en una estructura de crecimiento, no en volumen de tareas.",
+        "text": "NJA trabaja junto a empresas que ya entendieron que crecer no depende solo de aparecer mÃ¡s. Depende de aparecer de la manera correcta, para el pÃºblico correcto, con una operaciÃ³n que sostenga percepciÃ³n de valor, generaciÃ³n de demanda y avance comercial."
+      },
+      "contrast": {
+        "title": "QuÃ© cambia cuando NJA asume",
+        "items": [
+          "Menos acciÃ³n aislada y mÃ¡s lectura estratÃ©gica de lo que realmente mueve el negocio.",
+          "Menos presencia genÃ©rica y mÃ¡s posicionamiento con intenciÃ³n, estÃ©tica y consistencia.",
+          "Menos marketing que desgasta al equipo y mÃ¡s marketing que crea direcciÃ³n."
+        ]
+      },
+      "metrics": [
+        {
+          "value": "+500",
+          "label": "clientes atendidos"
+        },
+        {
+          "value": "9",
+          "label": "aÃ±os en el mercado"
+        },
+        {
+          "value": "360",
+          "label": "visiÃ³n estratÃ©gica"
+        }
+      ]
+    }
+  },
+  "Footer": {
+    "newsletter": {
+      "title": "SUSCRÍBETE Y RECIBE CONTENIDO EXCLUSIVO.",
+      "placeholder": "Escribe tu correo",
+      "button": "ENVIAR"
+    },
+    "contact": {
+      "title": "Contacto"
+    },
+    "links": {
+      "title": "Enlaces útiles",
+      "home": "Inicio",
+      "about": "Acerca de",
+      "how": "Cómo funciona",
+      "benefits": "Beneficios",
+      "feedbacks": "Reseñas",
+      "contact": "Contacto"
+    },
+    "terms": {
+      "title": "Términos",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos y Condiciones",
+      "cancellation": "Política de cancelación de cuenta"
+    },
+    "social": {
+      "title": "Redes sociales"
+    },
+    "rights": "Conectando personas, creando recuerdos. Todos los derechos reservados."
+  },
+  "privacyPolicy": {
+    "title": "Política de Privacidad",
+    "intro": "NJA Marketing (“nosotros”, “nuestro”, “empresa”) valora tu privacidad y se compromete a proteger tus datos personales. Esta Política de Privacidad describe cómo recopilamos, utilizamos, compartimos y protegemos tu información al utilizar nuestra aplicación, sitio web y servicios asociados.",
+    "sections": {
+      "1": {
+        "title": "1. Información que recopilamos",
+        "paragraphs": [
+          "Recopilamos únicamente los datos necesarios para ofrecer nuestros servicios y mejorar tu experiencia en la aplicación. Las categorías de datos pueden incluir:"
+        ],
+        "list": [
+          "Datos de identificación: nombre, correo electrónico, foto de perfil (si se proporciona).",
+          "Datos de uso: interacciones en la app, participación en mosaicos, acciones dentro de eventos.",
+          "Geolocalización aproximada: utilizada únicamente durante eventos para sincronizar mosaicos y detectar tu asiento.",
+          "Datos técnicos: modelo del dispositivo, sistema operativo, idioma, versión de la app, dirección IP anonimizada.",
+          "Contenido enviado: fotos, vídeos, comentarios, publicaciones e interacciones con otros usuarios."
+        ],
+        "footer": "Nunca recopilamos datos sensibles sin consentimiento expreso, ni recopilamos datos en segúndo plano sin necesidad."
+      },
+      "2": {
+        "title": "2. Cómo utilizamos tus datos",
+        "paragraphs": [
+          "Utilizamos tu información para:"
+        ],
+        "list": [
+          "garantizar el correcto funcionamiento de la aplicación;",
+          "permitir la sincronización de mosaicos luminosos en eventos;",
+          "personalizar la experiencia según tu perfil e idioma;",
+          "mejorar nuestros servicios y desarrollar nuevas funcionalidades;",
+          "generar métricas, análisis y estadísticas de uso de forma agregada y no identificable;",
+          "garantizar la seguridad de la plataforma y prevenir abusos;",
+          "enviar notificaciones importantes relacionadas con la app;",
+          "atender solicitudes de soporte, contacto y derechos del usuario."
+        ],
+        "footer": "Las métricas y estadísticas generadas para clubes, organizadores de eventos y socios deportivos incluyen únicamente información agregada, como niveles de participación, volumen de interacción, intensidad de mosaicos y patrones de uso. Estos datos no identifican individualmente al usuario."
+      },
+      "3": {
+        "title": "3. Compartición de información",
+        "paragraphs": [
+          "No compartimos datos personales identificables con terceros para fines comerciales. Sin embargo, podemos compartir con socios autorizados información agregada, estadística o anonimizada que no permite la identificación individual."
+        ],
+        "list": [
+          "Socios tecnológicos: empresas responsables de infraestructura, alojamiento, procesamiento de datos y herramientas analíticas.",
+          "Clubes, organizadores de eventos y socios deportivos: recepción de métricas agregadas sobre participación, interacción y patrones de uso, siempre sin datos personales.",
+          "Socios comerciales: análisis e insights anonimizados para investigaciones, mejoras y estudios estadísticos.",
+          "Autoridades legales: mediante orden judicial, investigación u obligación legal aplicable."
+        ],
+        "footer": "Todo intercambio cumple con la LGPD y demás normativas aplicables. Ningún dato personal sensible o identificable es vendido, comercializado o transferido sin tu consentimiento expreso."
+      },
+      "4": {
+        "title": "4. Base legal del tratamiento",
+        "paragraphs": [
+          "Tratamos tus datos con base en las siguientes bases legales previstas en la LGPD:"
+        ],
+        "list": [
+          "Consentimiento: geolocalización y notificaciones.",
+          "Ejecución del contrato: para ofrecer las funcionalidades principales de la app.",
+          "Interés legítimo: mejoras del servicio y prevención de fraudes.",
+          "Cumplimiento de obligación legal: cuando sea necesario."
+        ]
+      },
+      "5": {
+        "title": "5. Seguridad de los datos",
+        "paragraphs": [
+          "Aplicamos medidas técnicas y organizativas adecuadas para proteger tus datos contra accesos no autorizados, pérdida, destrucción, mal uso o divulgación indebida. Sin embargo, ningún sistema digital es 100% seguro."
+        ]
+      },
+      "6": {
+        "title": "6. Retención y eliminación de datos",
+        "paragraphs": [
+          "Conservamos tus datos solo durante el tiempo necesario para cumplir las finalidades de esta política. Puedes solicitar la eliminación definitiva de tu cuenta y datos en cualquier momento a través de nuestros canales oficiales."
+        ]
+      },
+      "7": {
+        "title": "7. Tus derechos",
+        "paragraphs": [
+          "Según la LGPD, tienes derecho a:"
+        ],
+        "list": [
+          "acceder a tus datos personales;",
+          "corregir datos incompletos o desactualizados;",
+          "solicitar eliminación o anonimización;",
+          "solicitar portabilidad;",
+          "revocar el consentimiento;",
+          "obtener información sobre el intercambio de datos."
+        ],
+        "footer": "Para ejercer tus derechos, ponte en contacto con nosotros a través de los canales indicados."
+      },
+      "8": {
+        "title": "8. Niños y adolescentes",
+        "paragraphs": [
+          "La aplicación no está dirigida a menores de 13 años. No recopilamos deliberadamente datos de niños en esta franja de edad. Si se recopilan datos de forma indebida, serán eliminados inmediatamente tras la notificación."
+        ]
+      },
+      "9": {
+        "title": "9. Transferencia internacional de datos",
+        "paragraphs": [
+          "Algunos de nuestros servidores y socios tecnológicos pueden estar ubicados fuera de Brasil. En ese caso, garantizamos que todas las transferencias cumplen estándares adecuados de protección de acuerdo con la LGPD y el GDPR."
+        ]
+      },
+      "10": {
+        "title": "10. Actualizaciones de esta política",
+        "paragraphs": [
+          "Podemos actualizar esta Política de Privacidad periódicamente. Los cambios relevantes serán comunicados en la aplicación o a través de nuestros canales oficiales."
+        ]
+      },
+      "11": {
+        "title": "11. Contacto",
+        "paragraphs": [
+          "Si tienes dudas sobre esta Política de Privacidad o deseas ejercer tus derechos, ponte en contacto con nuestro equipo en comercial@nja.marketing."
+        ]
+      }
+    }
+  },
+  "termsConditions": {
+    "title": "Términos y Condiciones",
+    "intro": "Bienvenido a la aplicación NJA Marketing. Estos Términos y Condiciones regulan el uso de la aplicación, los servicios y la plataforma ofrecidos por NJA Marketing (“nosotros”, “nuestro”, “empresa”). Al utilizar la aplicación o los servicios, tú (“usuario”, “tú”) aceptas estos Términos y nuestra Política de Privacidad.",
+    "sections": {
+      "1": {
+        "title": "1. Definiciones",
+        "paragraphs": [
+          "Aplicación: el software móvil NJA Marketing disponible en App Store y Google Play.",
+          "Servicios: funcionalidades ofrecidas, como detección de asiento en el evento, sincronización de mosaicos luminosos, red social de participantes, publicación de fotos/vídeos e interacciones.",
+          "Cuenta: el perfil de usuario creado para acceder a los servicios.",
+          "Evento: el evento deportivo o lugar donde se utiliza la aplicación y donde se realizan los mosaicos o interacciones."
+        ]
+      },
+      "2": {
+        "title": "2. Uso de la Aplicación y Servicios",
+        "paragraphs": [
+          "a) La aplicación está destinada a participantes que desean participar en experiencias interactivas (como mosaicos luminosos) y utilizar las funciones de comunidad.",
+          "b) Te comprometes a utilizar la aplicación de forma lícita y conforme a la legislación aplicable, a las normas del evento, a nuestras directrices de comunidad y a estos Términos.",
+          "c) No podrás utilizar la aplicación de manera que afecte negativamente la experiencia de otros usuarios o del evento, incluyendo interferencias con la sincronización o geolocalización."
+        ]
+      },
+      "3": {
+        "title": "3. Cuenta de Usuario, Credenciales y Responsabilidades",
+        "paragraphs": [
+          "a) Algunos servicios requieren crear una cuenta y proporcionar datos verdaderos y actualizados.",
+          "b) Eres responsable de la confidencialidad de tus credenciales (correo, contraseña, etc.) y por toda actividad realizada desde tu cuenta.",
+          "c) Debes notificarnos inmediatamente en caso de uso no autorizado o violación de seguridad.",
+          "d) Podemos suspender o eliminar tu cuenta si hay uso indebido o violación de estos Términos."
+        ]
+      },
+      "4": {
+        "title": "4. Geolocalización y Sincronización en Eventos",
+        "paragraphs": [
+          "a) El servicio incluye la detección de presencia en el evento mediante geolocalización u otros métodos técnicos para sincronizar tu asiento.",
+          "b) Autorizas el uso de tu ubicación/posición cuando sea necesario para permitir la sincronización en el evento.",
+          "c) Te comprometes a utilizar la app de forma segura, respetando las normas del recinto.",
+          "d) No garantizamos que todos los eventos admitan el 100% de las funcionalidades o que no ocurran fallos técnicos."
+        ]
+      },
+      "5": {
+        "title": "5. Contenido e Interacciones entre Usuarios",
+        "paragraphs": [
+          "a) Puedes publicar fotos, vídeos, comentarios o interactuar con otros usuarios.",
+          "b) Está prohibido publicar contenido ilegal, ofensivo, discriminatorio, que viole derechos de terceros o que sea sexual, violento o perjudicial.",
+          "c) Podemos moderar, limitar o eliminar contenido que infrinja estos Términos, así como suspender cuentas reincidentes.",
+          "d) Concedes a la empresa una licencia no exclusiva, mundial y sin royalties para usar, exhibir, reproducir o adaptar el contenido publicado, según lo establecido en la Política de Privacidad."
+        ]
+      },
+      "6": {
+        "title": "6. Propiedad Intelectual",
+        "paragraphs": [
+          "a) Todos los derechos sobre marcas, logotipos, diseño, texto, imágenes, sonido y software pertenecen a NJA Marketing o a sus licenciantes.",
+          "b) No puedes copiar, modificar, distribuir, vender o crear obras derivadas sin autorización previa por escrito.",
+          "c) Cualquier comentario o sugerencia enviada puede ser utilizada libremente por NJA Marketing sin obligación de compensación."
+        ]
+      },
+      "7": {
+        "title": "7. Pagos, Compras Integradas y Cancelaciones",
+        "paragraphs": [
+          "a) Si existen compras integradas o funciones de pago, se rigen por las políticas de App Store y Google Play.",
+          "b) Los reembolsos, cancelaciónes y cambios de plan se gestionan exclusivamente según las políticas de cada tienda.",
+          "c) Eres responsable de mantener un método de pago válido."
+        ]
+      },
+      "8": {
+        "title": "8. Limitación de Responsabilidad y Garantías",
+        "paragraphs": [
+          "a) La aplicación y los servicios se proporcionan “tal cual” y “según disponibilidad”, sin garantías de funcionamiento continuo.",
+          "b) NJA Marketing no se responsabiliza de daños directos o indirectos derivados del uso o imposibilidad de uso de la aplicación.",
+          "c) Las experiencias en eventos dependen de factores externos (red móvil, cobertura, reglas del evento), por lo que no garantizamos resultados específicos."
+        ]
+      },
+      "9": {
+        "title": "9. Modificaciones de los Términos",
+        "paragraphs": [
+          "a) Podemos modificar estos Términos en cualquier momento, publicando la nueva versión en la app o sitio web.",
+          "b) El uso continuado implica aceptación automática de las actualizaciones.",
+          "c) Recomendamos revisar periódicamente este documento."
+        ]
+      },
+      "10": {
+        "title": "10. Suspensión y Cancelación",
+        "paragraphs": [
+          "a) Podemos suspender o cancelar tu cuenta en caso de incumplimiento de estos Términos.",
+          "b) Tras la cancelación, deberás dejar de utilizar la app.",
+          "c) Las cláusulas sobre propiedad intelectual y limitación de responsabilidad permanecen vigentes."
+        ]
+      },
+      "11": {
+        "title": "11. Legislación Aplicable y Jurisdicción",
+        "paragraphs": [
+          "Estos Términos se rigen por las leyes de la República Federativa de Brasil. Cualquier disputa se resolverá en el tribunal de la comarca donde esté registrada NJA Marketing, renunciando a cualquier otro fuero aplicable."
+        ]
+      },
+      "contact": {
+        "text": "Si tienes dudas sobre estos Términos y Condiciones, ponte en contacto con nuestro equipo en comercial@nja.marketing."
+      }
+    }
+  },
+  "accountCancellationPolicy": {
+    "title": "Política de cancelación de cuenta",
+    "intro": "Esta Política de cancelación de cuenta explica cómo solicitar la cancelación (eliminación) de tu cuenta en NJA Marketing, qué sucede con tus datos y qué plazos pueden aplicar.",
+    "sections": {
+      "1": {
+        "title": "1. Cómo solicitar la cancelación",
+        "paragraphs": [
+          "Para solicitar la cancelación de la cuenta, ponte en contacto con nuestro soporte e indica la información necesaria para identificar tu cuenta (por ejemplo: el correo usado en el registro).",
+          "Por seguridad, podemos solicitar una verificación adicional antes de procesar la solicitud."
+        ]
+      },
+      "2": {
+        "title": "2. Plazos de procesamiento",
+        "paragraphs": [
+          "Comenzaremos a procesar tu solicitud lo antes posible tras la verificación.",
+          "En algunos casos, la cancelación puede tardar un corto período por motivos técnicos o requisitos legales."
+        ]
+      },
+      "3": {
+        "title": "3. Datos y contenido tras la cancelación",
+        "paragraphs": [
+          "Tras la cancelación, se revocará tu acceso a la app y a los servicios.",
+          "Cuando corresponda, podremos eliminar o anonimizar datos personales conforme a la legislación aplicable. Algunos registros pueden conservarse cuando sea necesario para cumplir obligaciones legales, prevenir fraudes o resolver disputas."
+        ]
+      },
+      "4": {
+        "title": "4. Suscripciones y pagos",
+        "paragraphs": [
+          "Si tienes una suscripción o compra integrada, las cancelaciónes y reembolsos se rigen por las políticas de la tienda donde te suscribiste (App Store o Google Play).",
+          "Cancelar la cuenta no cancela automáticamente una suscripción activa en la tienda."
+        ]
+      },
+      "5": {
+        "title": "5. Reactivación",
+        "paragraphs": [
+          "Una vez cancelada la cuenta, puede que no sea posible reactivarla. Si decides volver, puede que debas crear una nueva cuenta."
+        ]
+      },
+      "contact": {
+        "text": "Para solicitar la cancelación o resolver dudas, habla con nuestro equipo por WhatsApp."
+      }
+    },
+    "form": {
+      "title": "Formulario de cancelación de cuenta",
+      "description": "Completa los datos para solicitar la cancelación definitiva de tu cuenta.",
+      "fields": {
+        "fullName": "Nombre completo",
+        "accountEmail": "Correo de la cuenta",
+        "birthDate": "Fecha de nacimiento",
+        "phone": "Teléfono de contacto (opcional)",
+        "country": "País de residencia",
+        "reason": "Motivo de cancelación",
+        "reasonPlaceholder": "Selecciona un motivo",
+        "details": "Detalles adicionales",
+        "confirmOwnership": "Confirmo que soy titular de esta cuenta y autorizo su cancelación.",
+        "confirmDataLoss": "Entiendo que mi acceso y mis datos pueden eliminarse según esta política.",
+        "confirmExtraValidation": "Entiendo que el proceso de cancelación puede continuar por correo electrónico o WhatsApp y que, además de estos datos, pueden solicitarse documentos para comprobar la titularidad de la cuenta.",
+        "username": "Nombre de usuario de la cuenta"
+      },
+      "reasons": {
+        "privacy": "Privacidad y protección de datos",
+        "notUsing": "Ya no uso la app",
+        "newAccount": "Quiero crear una cuenta nueva",
+        "technicalIssues": "Problemas técnicos",
+        "other": "Otro motivo"
+      },
+      "submit": "Enviar solicitud de cancelación",
+      "disclaimer": "Al enviar, se abrirá tu aplicación de correo para finalizar el envío de la solicitud.",
+      "support": "Si necesitas ayuda adicional, contacta a comercial@nja.marketing."
+    },
+    "whatsapp": {
+      "button": "Hablar por WhatsApp",
+      "message": "¡Hola! Me gustaría solicitar la cancelación de mi cuenta en NJA Marketing."
+    }
+  },
+  "donations": {
+    "meta_title": "Donación - NJA Marketing",
+    "hero_badge": "Apoyo institucional",
+    "hero_title": "Tu donación fortalece experiencias que conectan a personas, deporte y comunidad.",
+    "hero_description": "Contribuye de forma segura y ayuda a sostener iniciativas alineadas con la visión de NJA Marketing.",
+    "trust_secure": "Pago protegido",
+    "trust_institutional": "Alineado con la visión institucional",
+    "availability_brazil": "Disponible solo en Brasil por ahora",
+    "login_title": "Inicia sesión para continuar",
+    "login_subtitle": "Accede con la misma cuenta de la app NJA Marketing para completar tu donación.",
+    "login_email_label": "Correo electrónico",
+    "login_email_placeholder": "tu@email.com",
+    "login_password_label": "Contraseña",
+    "login_password_placeholder": "Tu contraseña",
+    "login_submit": "Entrar",
+    "login_or": "o",
+    "login_google": "Continuar con Google",
+    "login_apple": "Continuar con Apple",
+    "login_2fa_title": "Verificación en dos pasos",
+    "login_2fa_description": "Introduce el código de 6 dígitos de tu app de autenticación.",
+    "login_2fa_placeholder": "000000",
+    "login_2fa_submit": "Verificar",
+    "login_2fa_back": "Volver",
+    "login_error_generic": "No se pudo completar el inicio de sesión. Inténtalo de nuevo.",
+    "login_error_credentials": "Correo o contraseña inválidos.",
+    "login_logged_as": "Conectado como",
+    "login_logout": "Salir",
+    "processing": "Procesando...",
+    "amount_label": "Importe de la donación",
+    "amount_helper": "Elige un importe rápido o escribe la cantidad que deseas contribuir.",
+    "amount_field_label": "Introduce el importe",
+    "amount_placeholder": "0,00",
+    "message_label": "Mensaje (opcional)",
+    "message_placeholder": "Escribe un mensaje de apoyo...",
+    "message_counter": "{count} caracteres restantes",
+    "anonymous_toggle": "Donación anónima",
+    "anonymous_helper": "Tu apoyo se registrará sin mostrar tu identidad públicamente.",
+    "method_title": "Método de pago",
+    "method_helper": "Elige el método de pago más conveniente para completar tu donación.",
+    "method_pix": "PIX",
+    "method_pix_description": "Práctico y rápido, con confirmación automática tras el pago.",
+    "method_card": "Tarjeta de crédito",
+    "method_card_description": "Pago inmediato con introducción segura de datos.",
+    "pix_cpf_label": "CPF del pagador",
+    "pix_cpf_placeholder": "000.000.000-00",
+    "secure_notice": "Tus datos se usan únicamente para procesar la donación de forma segura y conforme.",
+    "continue": "Continuar",
+    "error_amount_min": "Introduce un importe mayor que cero.",
+    "error_amount_max": "El importe máximo por donación es R$ 50.000,00.",
+    "error_message_max": "El mensaje debe tener como máximo 500 caracteres.",
+    "error_cpf": "Introduce un CPF válido de 11 dígitos.",
+    "error_card_number": "Número de tarjeta inválido.",
+    "error_card_holder": "Introduce el nombre del titular.",
+    "error_card_expiry": "Fecha de validez inválida.",
+    "error_card_cvv": "CVV inválido.",
+    "error_card_cpf": "Introduce un CPF/CNPJ válido.",
+    "pix_badge": "Donación vía PIX",
+    "pix_scan_qr": "Escanea el QR o copia el código para pagar.",
+    "pix_security_helper": "Pago protegido y procesado de forma segura.",
+    "pix_loading": "Generando tu PIX...",
+    "pix_instruction_title": "Cómo pagar",
+    "pix_instruction_helper": "Abre la app de tu banco, escanea el QR o pega el código copiar y pegar.",
+    "pix_code_label": "Código copiar y pegar",
+    "pix_copy": "Copiar código",
+    "pix_copied": "¡Código copiado!",
+    "pix_waiting_title": "Esperando el pago",
+    "pix_waiting": "En cuanto se confirme el pago, verás la confirmación aquí.",
+    "pix_reference_label": "Referencia",
+    "card_security_badge": "Pago seguro",
+    "card_security_description": "Tus datos se cifran y procesan de forma segura.",
+    "card_form_title": "Datos de la tarjeta",
+    "card_form_helper": "Completa los datos de la tarjeta de crédito para finalizar.",
+    "card_number": "Número de la tarjeta",
+    "card_holder": "Nombre del titular",
+    "card_cpf": "CPF/CNPJ del titular",
+    "card_expiry_month": "Mes",
+    "card_expiry_year": "Año",
+    "card_cvv": "CVV",
+    "card_optional_title": "Datos complementarios (opcional)",
+    "card_optional_helper": "Algunas operadoras solicitan esta información para aprobar el pago.",
+    "card_phone": "Teléfono",
+    "card_postal_code": "Código postal",
+    "card_address_number": "Número",
+    "card_trust_helper": "No almacenamos los datos de tu tarjeta. La información se usa solo para procesar esta donación.",
+    "submit_card": "Donar ahora",
+    "result_success_title": "¡Donación completada!",
+    "result_success_message": "Muchas gracias por tu apoyo. Tu contribución marca la diferencia.",
+    "result_failed_title": "No se pudo completar",
+    "result_failed_message": "Hubo un problema al procesar tu donación. Inténtalo de nuevo.",
+    "result_back": "Volver al inicio",
+    "error_generic": "Ocurrió un error. Inténtalo de nuevo.",
+    "error_title": "Error"
+  }
+}
