@@ -596,9 +596,11 @@ h4 {
   will-change: transform;
 }
 
-.landing-feedback-marquee:hover,
-.landing-feedback-marquee:focus-within {
-  animation-play-state: paused;
+@media (hover: hover) {
+  .landing-feedback-marquee:hover,
+  .landing-feedback-marquee:focus-within {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes landingLogoMarquee {
@@ -616,9 +618,11 @@ h4 {
   will-change: transform;
 }
 
-.landing-logo-marquee:hover,
-.landing-logo-marquee:focus-within {
-  animation-play-state: paused;
+@media (hover: hover) {
+  .landing-logo-marquee:hover,
+  .landing-logo-marquee:focus-within {
+    animation-play-state: paused;
+  }
 }
 
 @media (max-width: 767px) {
