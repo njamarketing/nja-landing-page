@@ -215,7 +215,8 @@ export default function VisualShowcaseScroll({ rows }: VisualShowcaseScrollProps
                 Post visual com imagem da campanha e comentario em destaque.
               </DialogDescription>
             </DialogHeader>
-            <DialogClose />
+            <DialogClose className="top-3 right-3 z-20 h-11 w-11 bg-black/80 md:hidden" />
+            <DialogClose className="hidden md:inline-flex" />
 
             <div className="grid max-h-[94vh] min-h-[36rem] overflow-hidden md:grid-cols-[minmax(0,1.45fr)_minmax(420px,0.75fr)]">
               <div className="relative min-h-[24rem] bg-[#050505] md:min-h-[82vh]">
@@ -230,22 +231,22 @@ export default function VisualShowcaseScroll({ rows }: VisualShowcaseScrollProps
 
               <div className="flex min-h-0 flex-col bg-[#0b0b0d]">
                 <div className="flex items-center gap-3 border-b border-white/10 px-5 py-4">
-                  <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-black/30 p-1.5">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-black/30 p-2">
                     <Image
-                      src="/nja-logo-white.png"
+                      src="/svg/ico.svg"
                       alt="NJA Marketing"
-                      width={42}
-                      height={42}
-                      className="h-auto w-full object-contain"
+                      width={48}
+                      height={48}
+                      className="h-full w-full object-contain"
                     />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <p className="truncate text-sm font-semibold text-white">
                       {selectedCard.profile.company}
                     </p>
                     <p className="truncate text-xs text-white/60">NJA Marketing</p>
                   </div>
-                  <div className="ml-auto flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.68rem] font-medium tracking-[0.18em] text-white/72 uppercase">
+                  <div className="mr-12 ml-auto flex shrink-0 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.68rem] font-medium tracking-[0.18em] text-white/72 uppercase md:mr-0">
                     <InstagramGlyph />
                     Post
                   </div>
@@ -253,16 +254,16 @@ export default function VisualShowcaseScroll({ rows }: VisualShowcaseScrollProps
 
                 <div className="flex-1 overflow-y-auto px-5 py-5">
                   <div className="flex items-start gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-black/30 p-1.5">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-black/30 p-2">
                       <Image
-                        src="/nja-logo-white.png"
+                        src="/svg/ico.svg"
                         alt="NJA Marketing"
-                        width={36}
-                        height={36}
-                        className="h-auto w-full object-contain"
+                        width={44}
+                        height={44}
+                        className="h-full w-full object-contain"
                       />
                     </div>
-                    <div className="space-y-3">
+                    <div className="min-w-0 space-y-3">
                       <p className="text-sm leading-7 text-white/88">
                         <span className="mr-2 font-semibold text-white">
                           {selectedCard.profile.company}
