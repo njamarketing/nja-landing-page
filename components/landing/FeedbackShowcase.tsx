@@ -7,7 +7,10 @@ type FeedbackShowcaseItem = {
   avatarSrc: string;
   company: string;
   name: string;
+  rating: number;
+  sourceUrl: string;
   text: string;
+  language: string;
 };
 
 type FeedbackShowcaseProps = {
@@ -53,10 +56,10 @@ function KunaiIcon({ direction }: { direction: "left" | "right" }) {
   );
 }
 
-function Stars() {
+function Stars({ rating }: { rating: number }) {
   return (
     <div className="text-[0.92rem] tracking-[0.24em] text-[#ffd166]">
-      {"\u2605\u2605\u2605\u2605\u2605"}
+      {"\u2605".repeat(rating)}{"\u2606".repeat(5 - rating)}
     </div>
   );
 }
@@ -70,7 +73,17 @@ export default function FeedbackShowcase({ items }: FeedbackShowcaseProps) {
     loop: items.length > 1,
   });
 
-  const marqueeItems = useMemo(() => [...items, ...items], [items]);
+  const marqueeItems = useMemo(() => {
+    if (items.length === 0) {
+      return [];
+    }
+
+    // Keep both halves wide enough for the existing animation with fewer reviews.
+    const repetitions = Math.max(1, Math.ceil(8 / items.length));
+    const sequence = Array.from({ length: repetitions }, () => items).flat();
+
+    return [...sequence, ...sequence];
+  }, [items]);
 
   useEffect(() => {
     if (!emblaApi) {
@@ -181,16 +194,20 @@ export default function FeedbackShowcase({ items }: FeedbackShowcaseProps) {
                       />
                       <div>
                         <div className="font-semibold text-white">{item.name}</div>
-                        <div className="text-sm text-white/55">{item.company}</div>
+                        <div className="text-sm text-white/55">
+                          <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">
+                            {item.company}
+                          </a>
+                        </div>
                       </div>
                     </div>
 
                     <div className="mt-6 flex items-center gap-3">
-                      <Stars />
-                      <span className="text-sm text-white/72">5.0</span>
+                      <Stars rating={item.rating} />
+                      <span className="text-sm text-white/72">{item.rating.toFixed(1)}</span>
                     </div>
 
-                    <p className="mt-6 text-lg leading-8 text-white/86">"{item.text}"</p>
+                    <p lang={item.language} className="mt-6 text-lg leading-8 whitespace-pre-line text-white/86">"{item.text}"</p>
                   </article>
                 </div>
               );

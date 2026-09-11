@@ -167,18 +167,18 @@
       "items": [
         {
           "label": "Caso 01",
-          "title": "Próximamente",
-          "description": "Espacio reservado para presentar evolución de rendimiento, posicionamiento y crecimiento comercial de clientes de NJA."
+          "title": "Yvy Hotel de Selva",
+          "description": "Posicionamiento, contenido y campañas para poner en valor la experiencia de alojamiento y fortalecer la marca del hotel."
         },
         {
           "label": "Caso 02",
-          "title": "Próximamente",
-          "description": "Listo para recibir indicadores, contexto del proyecto e impacto comercial de cada estrategia aplicada."
+          "title": "Cantina Tarantella",
+          "description": "Estrategia de contenido, campañas y acciones promocionales para despertar el deseo de visitar el restaurante, atraer más comensales y fomentar las visitas recurrentes."
         },
         {
           "label": "Caso 03",
-          "title": "Próximamente",
-          "description": "Estructura preparada para destacar números, aprendizajes y diferenciales con claridad."
+          "title": "Clínica Vitalis",
+          "description": "Contenido estratégico y comunicación médica para fortalecer la autoridad, la confianza y la presencia digital de la clínica."
         }
       ]
     },
@@ -186,7 +186,8 @@
       "badge": "Opiniones",
       "titleHighlight": "Opiniones",
       "titleAfter": "de clientes",
-      "description": "La base visual del hub se conservó y la sección quedó lista para recibir testimonios reales en cuanto sean aprobados.",
+      "description": "Conoce la experiencia de quienes cuentan con NJA. Fragmentos de sus reseñas en Google Maps, en portugués original.",
+      "source": "Reseña en Google Maps",
       "items": [
         {
           "name": "Nombre del cliente",

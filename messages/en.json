@@ -167,18 +167,18 @@
       "items": [
         {
           "label": "Case 01",
-          "title": "Coming soon",
-          "description": "Reserved space to present performance evolution, positioning and business growth from NJA clients."
+          "title": "Yvy Hotel de Selva",
+          "description": "Positioning, content and campaigns to showcase the guest experience and strengthen the hotel's brand."
         },
         {
           "label": "Case 02",
-          "title": "Coming soon",
-          "description": "Ready to receive indicators, project context and commercial impact for each strategy delivered."
+          "title": "Cantina Tarantella",
+          "description": "Content strategy, campaigns and promotional initiatives to build desire, attract more diners and encourage repeat visits."
         },
         {
           "label": "Case 03",
-          "title": "Coming soon",
-          "description": "Built to highlight numbers, lessons and differentiators with clarity."
+          "title": "Clínica Vitalis",
+          "description": "Strategic content and medical communication to strengthen the clinic's authority, trust and digital presence."
         }
       ]
     },
@@ -186,7 +186,8 @@
       "badge": "Feedback",
       "titleHighlight": "Client feedback",
       "titleAfter": "",
-      "description": "The hub visual base was preserved and the section is ready to receive real testimonials as soon as they are approved.",
+      "description": "Hear from clients who work with NJA. Excerpts from their Google Maps reviews, in the original Portuguese.",
+      "source": "Google Maps review",
       "items": [
         {
           "name": "Client name",

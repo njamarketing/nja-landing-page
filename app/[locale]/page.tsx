@@ -7,6 +7,7 @@ import SectionPlayVideo from "@/components/landing/SectionPlayVideo";
 import SectionReveal from "@/components/landing/SectionReveal";
 import VisualShowcaseScroll from "@/components/landing/VisualShowcaseScroll";
 import Header from "@/components/layout/Header";
+import customerFeedback from "@/data/customer-feedback.json";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -585,7 +586,12 @@ export default async function HomePage({ params }: HomePageProps) {
             </SectionReveal>
 
             <SectionReveal delay={0.12} distance={24}>
-              <FeedbackShowcase items={feedbackProfiles} />
+              <FeedbackShowcase
+                items={customerFeedback.items.map((item) => ({
+                  ...item,
+                  company: t("feedback.source"),
+                }))}
+              />
             </SectionReveal>
           </div>
         </section>
