@@ -252,7 +252,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
             titleAfter={ctaSectionCopy.titleAfter}
             description={ctaSectionCopy.description}
             buttonLabel={ctaSectionCopy.button}
-            contactHref={`/${locale}#contact`}
+            contactHref={`https://wa.me/${homeT("footer.phone").replace(/\D/g, "")}`}
             cards={ctaOpportunityCards}
           />
         </div>

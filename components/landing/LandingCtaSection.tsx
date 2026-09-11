@@ -57,7 +57,12 @@ export default function LandingCtaSection({
                 </div>
 
                 <div className="mt-12 flex justify-center lg:justify-start">
-                  <a href={contactHref} className="landing-button landing-button-light">
+                  <a
+                    href={contactHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="landing-button landing-button-light"
+                  >
                     {buttonLabel}
                   </a>
                 </div>

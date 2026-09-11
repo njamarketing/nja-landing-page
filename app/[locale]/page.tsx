@@ -604,7 +604,7 @@ export default async function HomePage({ params }: HomePageProps) {
           titleAfter={t("cta.titleAfter")}
           description={t("cta.description")}
           buttonLabel={t("cta.button")}
-          contactHref={`/${locale}#${sectionIds.contact}`}
+          contactHref={`https://wa.me/${t("footer.phone").replace(/\D/g, "")}`}
           cards={ctaOpportunityCards}
         />
 

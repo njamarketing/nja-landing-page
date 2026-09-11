@@ -726,7 +726,7 @@ export default async function PortfolioPage({ params }: PortfolioPageProps) {
           titleAfter={homeT("cta.titleAfter")}
           description={homeT("cta.description")}
           buttonLabel={homeT("cta.button")}
-          contactHref={`/${locale}#${sectionIds.contact}`}
+          contactHref={`https://wa.me/${homeT("footer.phone").replace(/\D/g, "")}`}
           cards={ctaCards}
         />
 
