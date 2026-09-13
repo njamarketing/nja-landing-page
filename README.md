@@ -73,3 +73,37 @@ npm run build
 ```
 
 Para executar o resultado do build localmente, use `npm start`.
+
+## Produto de criação de sites
+
+A página está em `/pt/website-creation`, com versões em `/en/website-creation` e
+`/es/website-creation`. O menu principal inclui o acesso ao produto, e a home tem
+uma chamada na seção de soluções. As URLs anteriores (`/{locale}/criacao-de-sites`)
+redirecionam permanentemente para a nova rota, preservando o idioma.
+
+O briefing tem três etapas, validação e revisão dos dados. Ao concluir, abre o
+WhatsApp da NJA configurado em `HomePage.footer.phone`, com a mensagem preenchida.
+O cliente precisa tocar em **Enviar** no WhatsApp; um link `wa.me` não confirma
+nem realiza o envio sozinho. Ao voltar, ele confirma o envio e segue ao pagamento.
+Há opções para reabrir a conversa, copiar o briefing e editar os dados.
+O rascunho é mantido no `sessionStorage` da aba para permitir retorno ou recarga;
+não há envio dos dados a uma API própria.
+
+Para ativar o pagamento, configure a variável de ambiente no servidor:
+
+```dotenv
+NJA_WEBSITE_PAYMENT_URL=https://seu-provedor.com/seu-link-de-pagamento
+```
+
+Em desenvolvimento, use `.env.local` e reinicie o servidor. No ambiente de deploy,
+configure a variável e publique novamente. A URL deve usar HTTPS e não conter
+credenciais. Enquanto ela estiver ausente ou inválida, a página orienta o cliente
+a combinar o pagamento com a equipe no WhatsApp. Nenhum pagamento é criado ou
+confirmado pelo site; isso é responsabilidade do provedor do link.
+
+Os textos do produto estão em `data/website-product.ts`; os valores e a montagem
+do briefing estão em `lib/website-briefing.ts`. Alterações comerciais devem manter
+os textos dos três idiomas e a mensagem de WhatsApp coerentes.
+
+Execute `npm run test:website` para verificar a validação, a montagem da mensagem
+e a configuração do link de pagamento (Node.js 22).

@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/franquias",
     "/marca",
     "/video-momentum",
+    "/website-creation",
     "/terms-conditions",
     "/privacy-policy",
     "/account-cancellation-policy",

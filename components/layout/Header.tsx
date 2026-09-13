@@ -136,7 +136,7 @@ export default function Header({ locale, navItems = [], cta, variant = "default"
             href={logoHref}
             aria-current={isHome ? "page" : undefined}
             aria-label="Ir para o início"
-            className={`shrink-0 transition-opacity hover:opacity-80 ${isOpen ? "opacity-0 lg:opacity-100" : ""}`}
+            className={`shrink-0 transition-opacity hover:opacity-80 ${isOpen ? "opacity-0 xl:opacity-100" : ""}`}
           >
             <Image
               src="/nja-logo-white.png"
@@ -150,7 +150,7 @@ export default function Header({ locale, navItems = [], cta, variant = "default"
 
           {navItems.length > 0 && (
             <nav
-              className="hidden items-center gap-4 text-xs text-white/70 lg:flex xl:gap-6 xl:text-sm"
+              className="hidden items-center gap-4 text-sm whitespace-nowrap text-white/70 xl:flex 2xl:gap-6"
               aria-label="Navegação principal"
             >
               {navItems.map((item) => (
@@ -223,7 +223,7 @@ export default function Header({ locale, navItems = [], cta, variant = "default"
             </div>
 
             {cta && (
-              <div className="hidden lg:block">
+              <div className="hidden whitespace-nowrap xl:block">
                 <a
                   href={cta.href}
                   className={
@@ -244,7 +244,7 @@ export default function Header({ locale, navItems = [], cta, variant = "default"
                 aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
                 aria-expanded={isOpen}
                 aria-controls={mobileMenuId}
-                className={`flex h-11 w-11 items-center justify-center rounded-full text-white transition hover:bg-white/10 lg:hidden ${
+                className={`flex h-11 w-11 items-center justify-center rounded-full text-white transition hover:bg-white/10 xl:hidden ${
                   isOpen ? "invisible" : "visible"
                 }`}
               >
@@ -257,7 +257,7 @@ export default function Header({ locale, navItems = [], cta, variant = "default"
 
       {navItems.length > 0 && (
         <div
-          className={`fixed inset-0 z-50 lg:hidden ${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+          className={`fixed inset-0 z-50 xl:hidden ${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}
           aria-hidden={!isOpen}
         >
           <button

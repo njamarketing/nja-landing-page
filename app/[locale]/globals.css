@@ -280,6 +280,47 @@ h4 {
     opacity 180ms ease;
 }
 
+.website-product section[id] {
+  scroll-margin-top: 7rem;
+}
+
+.website-product :is(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--brand-cyan);
+  outline-offset: 4px;
+}
+
+.website-input {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.75rem;
+  background: rgba(3, 8, 16, 0.7);
+  padding: 0.8rem 1rem;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  color-scheme: dark;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+textarea.website-input {
+  resize: vertical;
+}
+
+.website-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.website-input:focus {
+  border-color: var(--brand-cyan);
+  background: rgba(8, 19, 32, 0.9);
+}
+
+.website-input[aria-invalid="true"] {
+  border-color: #fda4af;
+}
+
 .landing-button:hover {
   transform: translateY(-1px);
 }
