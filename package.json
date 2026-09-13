@@ -7,7 +7,8 @@
     "dev:lan": "next dev --hostname 0.0.0.0",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:website": "node --experimental-strip-types --test tests/website-briefing.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

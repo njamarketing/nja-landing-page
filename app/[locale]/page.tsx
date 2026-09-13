@@ -6,8 +6,10 @@ import LogoMarquee from "@/components/landing/LogoMarquee";
 import SectionPlayVideo from "@/components/landing/SectionPlayVideo";
 import SectionReveal from "@/components/landing/SectionReveal";
 import VisualShowcaseScroll from "@/components/landing/VisualShowcaseScroll";
+import WebsiteProductPromo from "@/components/landing/WebsiteProductPromo";
 import Header from "@/components/layout/Header";
 import customerFeedback from "@/data/customer-feedback.json";
+import { getWebsiteProductCopy } from "@/data/website-product";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -249,6 +251,7 @@ export default async function HomePage({ params }: HomePageProps) {
           navItems={[
             { label: t("nav.home"), href: `/${locale}#${sectionIds.top}` },
             { label: t("nav.solutions"), href: `/${locale}#${sectionIds.solutions}` },
+            { label: t("nav.websites"), href: `/${locale}/website-creation` },
             { label: t("nav.portfolio"), href: `/${locale}/portfolio` },
             { label: t("nav.about"), href: `/${locale}/about-us` },
             { label: t("nav.brand"), href: `/${locale}/marca` },
@@ -490,6 +493,8 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
         </section>
 
+        <WebsiteProductPromo locale={locale} />
+
         <section
           id={sectionIds.about}
           aria-labelledby="about-title"
@@ -627,6 +632,7 @@ export default async function HomePage({ params }: HomePageProps) {
           termsLabel={t("footer.terms")}
           navItems={[
             { label: t("nav.solutions"), href: `/${locale}#${sectionIds.solutions}` },
+            { label: getWebsiteProductCopy(locale).nav.product, href: `/${locale}/website-creation` },
             { label: t("nav.about"), href: `/${locale}#${sectionIds.about}` },
             { label: t("nav.portfolio"), href: `/${locale}/portfolio` },
             { label: t("nav.franchises"), href: `/${locale}/franquias` },

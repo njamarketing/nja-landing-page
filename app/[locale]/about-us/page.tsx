@@ -181,6 +181,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
         navItems={[
           { label: homeT("nav.home"), href: `/${locale}` },
           { label: homeT("nav.solutions"), href: `/${locale}#solutions` },
+          { label: homeT("nav.websites"), href: `/${locale}/website-creation` },
           { label: homeT("nav.portfolio"), href: `/${locale}/portfolio` },
           { label: homeT("nav.about"), href: `/${locale}/about-us` },
           { label: homeT("nav.brand"), href: `/${locale}/marca` },
