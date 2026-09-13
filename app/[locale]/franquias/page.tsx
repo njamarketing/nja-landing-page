@@ -294,7 +294,7 @@ export default async function FranquiasPage({ params }: PageProps) {
           titleAfter=""
           description="Buscamos parceiros que compartilhem da nossa visão e queiram construir uma operação relevante, levando estratégia, conhecimento e execução para empresas da sua região."
           buttonLabel="Quero ser um franqueado NJA"
-          contactHref={`/${locale}#contact`}
+          contactHref={`https://wa.me/${homeT("footer.phone").replace(/\D/g, "")}`}
           cards={ctaCards}
         />
       </main>

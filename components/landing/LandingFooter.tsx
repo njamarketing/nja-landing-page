@@ -84,8 +84,17 @@ export default function LandingFooter({
           <SectionReveal delay={0.16}>
             <div className="landing-label text-white/42">{contactTitle}</div>
             <div className="mt-4 space-y-3 text-sm text-white/72">
-              <div>{email}</div>
-              <div>{phone}</div>
+              <a href={`mailto:${email}`} className="block transition hover:text-white">
+                {email}
+              </a>
+              <a
+                href={`https://wa.me/${phone.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition hover:text-white"
+              >
+                {phone} (WhatsApp)
+              </a>
             </div>
           </SectionReveal>
         </div>

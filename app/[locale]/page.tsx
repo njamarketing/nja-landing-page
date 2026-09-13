@@ -7,6 +7,7 @@ import SectionPlayVideo from "@/components/landing/SectionPlayVideo";
 import SectionReveal from "@/components/landing/SectionReveal";
 import VisualShowcaseScroll from "@/components/landing/VisualShowcaseScroll";
 import Header from "@/components/layout/Header";
+import customerFeedback from "@/data/customer-feedback.json";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -119,6 +120,12 @@ const trustedBrandsData: LogoItem[] = [
   { name: "Matriscan", src: "/images/logomarks/matriscan.jpg" },
   { name: "Vitalis", src: "/images/logomarks/vitalis.jpg" },
   { name: "Yvy", src: "/images/logomarks/yvy.jpg" },
+  { name: "Mercosul", src: "/images/logomarks/mercosul.jpg" },
+  { name: "mtarabayan", src: "/images/logomarks/mtarabayan.jpg" },
+  { name: "tarantella", src: "/images/logomarks/tarantella.jpg" },
+  { name: "texas", src: "/images/logomarks/texas.jpg" },
+  { name: "xagro", src: "/images/logomarks/xagro.jpg" },
+  { name: "Doce Romã", src: "/images/logomarks/doceroma.jpg" },
 ];
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
@@ -585,7 +592,12 @@ export default async function HomePage({ params }: HomePageProps) {
             </SectionReveal>
 
             <SectionReveal delay={0.12} distance={24}>
-              <FeedbackShowcase items={feedbackProfiles} />
+              <FeedbackShowcase
+                items={customerFeedback.items.map((item) => ({
+                  ...item,
+                  company: t("feedback.source"),
+                }))}
+              />
             </SectionReveal>
           </div>
         </section>
@@ -598,7 +610,7 @@ export default async function HomePage({ params }: HomePageProps) {
           titleAfter={t("cta.titleAfter")}
           description={t("cta.description")}
           buttonLabel={t("cta.button")}
-          contactHref={`/${locale}#${sectionIds.contact}`}
+          contactHref={`https://wa.me/${t("footer.phone").replace(/\D/g, "")}`}
           cards={ctaOpportunityCards}
         />
 

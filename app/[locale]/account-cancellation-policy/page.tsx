@@ -29,7 +29,7 @@ export default async function AccountCancellationPolicyPage({ params }: { params
 
             <form
               className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2"
-              action="mailto:contato@nja.marketing"
+              action="mailto:sac@njamarketing.com.br"
               method="post"
               encType="text/plain"
             >

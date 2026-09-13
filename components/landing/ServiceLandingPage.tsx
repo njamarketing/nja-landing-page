@@ -122,7 +122,7 @@ export default async function ServiceLandingPage({
           titleAfter={homeT("cta.titleAfter")}
           description={homeT("cta.description")}
           buttonLabel={homeT("cta.button")}
-          contactHref={`/${locale}#contact`}
+          contactHref={`https://wa.me/${homeT("footer.phone").replace(/\D/g, "")}`}
           cards={heroCards.slice(0, 3)}
         />
 
