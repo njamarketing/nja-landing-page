@@ -120,6 +120,12 @@ const trustedBrandsData: LogoItem[] = [
   { name: "Matriscan", src: "/images/logomarks/matriscan.jpg" },
   { name: "Vitalis", src: "/images/logomarks/vitalis.jpg" },
   { name: "Yvy", src: "/images/logomarks/yvy.jpg" },
+  { name: "Mercosul", src: "/images/logomarks/mercosul.jpg" },
+  { name: "mtarabayan", src: "/images/logomarks/mtarabayan.jpg" },
+  { name: "tarantella", src: "/images/logomarks/tarantella.jpg" },
+  { name: "texas", src: "/images/logomarks/texas.jpg" },
+  { name: "xagro", src: "/images/logomarks/xagro.jpg" },
+  { name: "Doce Romã", src: "/images/logomarks/doceroma.jpg" },
 ];
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
