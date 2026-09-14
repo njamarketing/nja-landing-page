@@ -127,7 +127,7 @@ const trustedBrandsData: LogoItem[] = [
   { name: "tarantella", src: "/images/logomarks/tarantella.jpg" },
   { name: "texas", src: "/images/logomarks/texas.jpg" },
   { name: "xagro", src: "/images/logomarks/xagro.jpg" },
-  { name: "Doce Romã", src: "/images/logomarks/doceroma.jpg" },
+  { name: "Doce Romã", src: "/images/logomarks/doceroma.png" },
 ];
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
