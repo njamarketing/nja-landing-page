@@ -117,7 +117,7 @@ export default function WebsiteHeroImage() {
               top: fragment.top,
               width: fragment.width,
             }}
-            initial={false}
+            initial={{ y: 0, rotate: fragment.angle }}
             animate={
               reducedMotion
                 ? { y: 0, rotate: fragment.angle }
