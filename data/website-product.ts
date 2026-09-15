@@ -18,11 +18,11 @@ const pt = {
     before: "Sua empresa merece",
     highlight: "um site à altura.",
     description:
-      "Transforme quem encontra sua empresa em alguém que confia no seu trabalho. Um site profissional para apresentar seus serviços e abrir caminho para novas conversas.",
+      "Um site profissional para apresentar seus serviços e atrair novos clientes.",
     development: "para desenvolver",
     monthly: "/mês para manter no ar",
     priceJoin: "+",
-    note: "Primeiro ano de domínio .br incluso. Mensalidade sem reajuste.",
+    note: "Primeiro ano de domínio .br incluso.",
     stats: [
       "para colocar no ar*",
       "pensado para o celular",
@@ -91,7 +91,7 @@ const pt = {
     title: "Sua vitrine digital, com foco no que importa.",
     description:
       "Ideal para prestadores de serviço, profissionais autônomos e negócios locais que precisam apresentar sua empresa e receber contatos.",
-    includedTitle: "Feito para",
+    includedTitle: "Incluso no plano",
     included: [
       "Apresentar sua empresa e sua história",
       "Mostrar serviços, diferenciais e portfólio",
@@ -344,11 +344,11 @@ const en: WebsiteProductCopy = {
     before: "Your business deserves",
     highlight: "a website to match.",
     description:
-      "Turn people who discover your business into people who trust your work. A professional website to present your services and start new conversations.",
+      "A professional website to showcase your services and attract new customers.",
     development: "for development",
     monthly: "/month to keep it online",
     priceJoin: "+",
-    note: "First year of a .br domain included. No monthly price increases.",
+    note: "First year of a .br domain included.",
     stats: ["to go live*", "designed for mobile", "your business available"],
     deadline:
       "*Within 48 hours after payment confirmation and receipt of the complete brief and materials.",
@@ -413,14 +413,14 @@ const en: WebsiteProductCopy = {
     title: "Your digital storefront, focused on what matters.",
     description:
       "Ideal for service providers, independent professionals and local businesses that need to present their company and receive inquiries.",
-    includedTitle: "Designed to",
+    includedTitle: "What your website can do",
     included: [
       "Present your business and its story",
       "Showcase services, strengths and portfolio",
       "Share contact details and service areas",
       "Direct visitors to your WhatsApp",
     ],
-    excludedTitle: "Outside this plan",
+    excludedTitle: "Features not included",
     excluded: [
       "Online stores, carts and checkout",
       "Login areas or admin panels",
@@ -664,11 +664,11 @@ const es: WebsiteProductCopy = {
     before: "Tu empresa merece",
     highlight: "un sitio a su altura.",
     description:
-      "Convierte a quienes descubren tu empresa en personas que confían en tu trabajo. Un sitio profesional para presentar tus servicios y abrir nuevas conversaciones.",
+      "Un sitio profesional para presentar tus servicios y atraer nuevos clientes.",
     development: "para desarrollar",
     monthly: "/mes para mantenerlo en línea",
     priceJoin: "+",
-    note: "Primer año de dominio .br incluido. Mensualidad sin aumentos.",
+    note: "Primer año de dominio .br incluido.",
     stats: [
       "para publicar*",
       "pensado para el celular",
@@ -736,14 +736,14 @@ const es: WebsiteProductCopy = {
     title: "Tu vitrina digital, enfocada en lo que importa.",
     description:
       "Ideal para prestadores de servicios, profesionales independientes y negocios locales que necesitan presentar su empresa y recibir contactos.",
-    includedTitle: "Hecho para",
+    includedTitle: "Lo que puede hacer tu sitio web",
     included: [
       "Presentar tu empresa y su historia",
       "Mostrar servicios, diferenciales y portafolio",
       "Compartir contactos y área de atención",
       "Dirigir visitantes a tu WhatsApp",
     ],
-    excludedTitle: "Fuera de este plan",
+    excludedTitle: "Funciones no incluidas",
     excluded: [
       "Tienda virtual, carrito y checkout",
       "Área de acceso o panel administrativo",

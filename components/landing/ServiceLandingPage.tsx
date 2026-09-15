@@ -1,3 +1,4 @@
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import Header from "@/components/layout/Header";
 import LandingCtaSection from "@/components/landing/LandingCtaSection";
 import LandingFooter from "@/components/landing/LandingFooter";
@@ -123,7 +124,7 @@ export default async function ServiceLandingPage({
           titleAfter={homeT("cta.titleAfter")}
           description={homeT("cta.description")}
           buttonLabel={homeT("cta.button")}
-          contactHref={`https://wa.me/${homeT("footer.phone").replace(/\D/g, "")}`}
+          contactHref={getWhatsAppUrl(homeT("footer.phone"), locale, "service", copy.overview.badge)}
           cards={heroCards.slice(0, 3)}
         />
 

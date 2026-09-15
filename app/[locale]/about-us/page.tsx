@@ -1,3 +1,4 @@
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import type { Metadata } from "next";
 import AboutHeroSection from "@/components/landing/AboutHeroSection";
 import AboutTeamSection from "@/components/landing/AboutTeamSection";
@@ -253,7 +254,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
             titleAfter={ctaSectionCopy.titleAfter}
             description={ctaSectionCopy.description}
             buttonLabel={ctaSectionCopy.button}
-            contactHref={`https://wa.me/${homeT("footer.phone").replace(/\D/g, "")}`}
+            contactHref={getWhatsAppUrl(homeT("footer.phone"), locale, "about")}
             cards={ctaOpportunityCards}
           />
         </div>

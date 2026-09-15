@@ -1,3 +1,4 @@
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import FeedbackShowcase from "@/components/landing/FeedbackShowcase";
 import HeroVisualIntro from "@/components/landing/HeroVisualIntro";
 import LandingCtaSection from "@/components/landing/LandingCtaSection";
@@ -615,7 +616,7 @@ export default async function HomePage({ params }: HomePageProps) {
           titleAfter={t("cta.titleAfter")}
           description={t("cta.description")}
           buttonLabel={t("cta.button")}
-          contactHref={`https://wa.me/${t("footer.phone").replace(/\D/g, "")}`}
+          contactHref={getWhatsAppUrl(t("footer.phone"), locale, "analysis")}
           cards={ctaOpportunityCards}
         />
 

@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about-us",
     "/portfolio",
     "/franquias",
+    "/franquias/teixeira-de-freitas",
     "/marca",
     "/video-momentum",
     "/website-creation",

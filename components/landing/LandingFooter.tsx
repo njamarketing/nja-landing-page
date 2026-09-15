@@ -1,5 +1,8 @@
 "use client";
 
+import { getWhatsAppUrl } from "@/lib/whatsapp";
+
+
 import Image from "next/image";
 import SectionReveal from "@/components/landing/SectionReveal";
 
@@ -88,7 +91,7 @@ export default function LandingFooter({
                 {email}
               </a>
               <a
-                href={`https://wa.me/${phone.replace(/\D/g, "")}`}
+                href={getWhatsAppUrl(phone, locale, "contact")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block transition hover:text-white"

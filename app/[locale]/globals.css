@@ -655,7 +655,7 @@ textarea.website-input {
 }
 
 .landing-logo-marquee {
-  animation: landingLogoMarquee 55s linear infinite;
+  animation: landingLogoMarquee 150s linear infinite;
   will-change: transform;
 }
 

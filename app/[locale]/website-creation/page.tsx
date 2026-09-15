@@ -1,10 +1,11 @@
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import {
   ArrowRight,
   ArrowUpRight,
   Check,
-  ChevronDown,
   Clock3,
   Globe2,
   Layers3,
@@ -13,13 +14,15 @@ import {
   Server,
   Smartphone,
   Sparkles,
-  X,
+  Minus,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
 import LandingFooter from "@/components/landing/LandingFooter";
 import SectionReveal from "@/components/landing/SectionReveal";
 import WebsiteBriefingForm from "@/components/landing/WebsiteBriefingForm";
-import WebsitePreview from "@/components/landing/WebsitePreview";
+import WebsiteFaqItem from "@/components/landing/WebsiteFaqItem";
+import WebsiteBenefitsAccordion from "@/components/landing/WebsiteBenefitsAccordion";
+import WebsiteHeroImage from "@/components/landing/WebsiteHeroImage";
 import { getWebsiteProductCopy } from "@/data/website-product";
 import { routing } from "@/i18n/routing";
 import { getWebsitePaymentUrl, WEBSITE_OFFER } from "@/lib/website-briefing";
@@ -83,7 +86,7 @@ export default async function WebsiteProductPage({ params }: PageProps) {
   const copy = getWebsiteProductCopy(locale);
   const home = await getTranslations({ locale, namespace: "HomePage" });
   const phone = home("footer.phone");
-  const contactHref = `https://wa.me/${phone.replace(/\D/g, "")}`;
+  const contactHref = getWhatsAppUrl(phone, locale, "websiteQuestions");
   const paymentUrl = getWebsitePaymentUrl(process.env.NJA_WEBSITE_PAYMENT_URL);
   const navItems = [
     { label: home("nav.home"), href: `/${locale}` },
@@ -113,9 +116,8 @@ export default async function WebsiteProductPage({ params }: PageProps) {
           <div className="landing-grid-bg pointer-events-none absolute inset-0 opacity-50" />
           <div className="landing-orb landing-orb-top pointer-events-none" />
           <div className="landing-orb landing-orb-right pointer-events-none opacity-60" />
-          <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2 lg:gap-14">
-            <SectionReveal direction="left" distance={24}>
-              <Badge>{copy.hero.badge}</Badge>
+          <div className="relative mx-auto grid max-w-[1440px] items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
+            <SectionReveal direction="left" distance={24} className="order-2 lg:order-1">
               <h1
                 id="website-title"
                 className="mt-6 max-w-2xl text-[2.65rem] leading-[1.05] font-bold tracking-[-.04em] sm:text-6xl lg:text-[4.2rem]"
@@ -125,7 +127,7 @@ export default async function WebsiteProductPage({ params }: PageProps) {
                   {copy.hero.highlight}
                 </span>
               </h1>
-              <p className="mt-6 max-w-xl text-base leading-8 text-white/68 sm:text-lg">
+              <p className="mt-6 max-w-xl text-xl leading-8 text-white/80 sm:text-2xl sm:leading-9">
                 {copy.hero.description}
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-4">
@@ -152,8 +154,7 @@ export default async function WebsiteProductPage({ params }: PageProps) {
                   </p>
                 </div>
               </div>
-              <p className="mt-5 flex items-start gap-2 text-xs leading-6 text-brand-cyan/90">
-                <Check className="mt-1 size-3.5 shrink-0" aria-hidden="true" />
+              <p className="mt-5 text-sm leading-6 text-brand-cyan sm:text-base">
                 {copy.hero.note}
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
@@ -167,37 +168,39 @@ export default async function WebsiteProductPage({ params }: PageProps) {
                 >
                   {copy.secondaryCta}
                 </a>
-              </div>
-              <div className="mt-9 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
-                {[WEBSITE_OFFER.delivery, "100%", "24/7"].map(
-                  (value, index) => (
-                    <div key={value}>
-                      <p
-                        className={`font-display text-2xl ${index === 0 ? "text-brand-cyan" : "text-white"}`}
-                      >
-                        {value}
-                      </p>
-                      <p className="mt-1 text-[11px] leading-5 text-white/50">
-                        {copy.hero.stats[index]}
-                      </p>
-                    </div>
-                  ),
-                )}
+
               </div>
             </SectionReveal>
             <SectionReveal
               direction="right"
               distance={24}
               delay={0.12}
-              className="pb-10 lg:pb-0"
+              className="order-1 lg:order-2"
             >
-              <WebsitePreview copy={copy.preview} />
+              <WebsiteHeroImage />
             </SectionReveal>
           </div>
-          <p className="relative mx-auto mt-12 max-w-7xl text-[11px] leading-6 text-white/45">
-            {copy.hero.deadline}
-          </p>
         </section>
+
+        <div className="relative border-y border-brand-cyan/15 bg-brand-cyan/5 px-4 py-8 sm:px-6 sm:py-10">
+          <div className="mx-auto max-w-7xl">
+            <dl className="grid grid-cols-3 divide-x divide-white/10">
+              {[WEBSITE_OFFER.delivery, "100%", "24/7"].map((value, index) => (
+                <div key={value} className="flex flex-col items-center px-2 text-center sm:px-6">
+                  <dt className="order-2 mt-2 max-w-44 text-[11px] leading-5 text-white/65 sm:text-xs">
+                    {copy.hero.stats[index]}
+                  </dt>
+                  <dd className="font-display text-2xl font-semibold text-brand-cyan sm:text-3xl md:text-4xl">
+                    {value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mx-auto mt-6 max-w-3xl text-center text-[11px] leading-5 text-white/50 sm:text-xs">
+              {copy.hero.deadline}
+            </p>
+          </div>
+        </div>
 
         <section
           id="beneficios"
@@ -221,7 +224,16 @@ export default async function WebsiteProductPage({ params }: PageProps) {
                 {copy.benefits.description}
               </p>
             </SectionReveal>
-            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <WebsiteBenefitsAccordion
+              items={copy.benefits.items.map((item, index) => {
+                const Icon = benefitIcons[index];
+                return {
+                  ...item,
+                  icon: <Icon className="size-4" strokeWidth={1.5} aria-hidden="true" />,
+                };
+              })}
+            />
+            <div className="mt-12 hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
               {copy.benefits.items.map((item, index) => {
                 const Icon = benefitIcons[index];
                 return (
@@ -408,39 +420,44 @@ export default async function WebsiteProductPage({ params }: PageProps) {
                 {copy.scope.description}
               </p>
             </SectionReveal>
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <div className="mt-12 grid border-y border-white/10 md:grid-cols-2">
               {[copy.scope.included, copy.scope.excluded].map(
                 (items, index) => (
                   <SectionReveal
                     key={index}
                     delay={index * 0.08}
-                    className={`rounded-3xl border p-7 ${index === 0 ? "border-brand-cyan/15 bg-brand-cyan/3" : "border-white/10 bg-white/2"}`}
+                    className={`grid grid-cols-[80px_minmax(0,1fr)] content-start items-center gap-x-5 py-8 sm:grid-cols-[112px_minmax(0,1fr)] sm:gap-x-6 sm:py-10 ${index === 0 ? "border-b border-white/10 md:border-r md:border-b-0 md:pr-8" : "md:pl-8"}`}
                   >
+                    <div className="relative aspect-[6/5] w-full">
+                      <Image
+                        src={index === 0 ? "/images/avatar/ninja-approve.png" : "/images/avatar/ninja-x.png"}
+                        alt=""
+                        fill
+                        sizes="(max-width: 640px) 80px, 112px"
+                        className="object-contain"
+                      />
+                    </div>
                     <h3
-                      className={`text-sm font-semibold ${index === 0 ? "text-brand-cyan" : "text-white/75"}`}
+                      className={`min-w-0 text-lg font-semibold sm:text-xl ${index === 0 ? "text-brand-cyan" : "text-white/85"}`}
                     >
                       {index === 0
                         ? copy.scope.includedTitle
                         : copy.scope.excludedTitle}
                     </h3>
-                    <ul className="mt-5 space-y-4">
+                    <ul className="col-span-2 mt-6 divide-y divide-white/10">
                       {items.map((item) => (
                         <li
                           key={item}
-                          className="flex items-start gap-3 text-sm leading-6 text-white/65"
+                          className="flex items-start gap-3 py-4 text-sm leading-6 text-white/75"
                         >
-                          {index === 0 ? (
-                            <Check
-                              className="mt-1 size-4 shrink-0 text-brand-cyan"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <X
-                              className="mt-1 size-4 shrink-0 text-white/35"
-                              aria-hidden="true"
-                            />
-                          )}
-                          {item}
+                          <span className={`mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full ${index === 0 ? "bg-brand-cyan/10 text-brand-cyan" : "bg-white/5 text-white/45"}`}>
+                            {index === 0 ? (
+                              <Check className="size-3.5" aria-hidden="true" />
+                            ) : (
+                              <Minus className="size-3.5" aria-hidden="true" />
+                            )}
+                          </span>
+                          <span>{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -451,7 +468,7 @@ export default async function WebsiteProductPage({ params }: PageProps) {
             <p className="mt-6 text-sm leading-7 text-white/55">
               {copy.scope.custom}{" "}
               <a
-                href={contactHref}
+                href={getWhatsAppUrl(phone, locale, "customWebsite")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-cyan underline underline-offset-4"
@@ -522,21 +539,24 @@ export default async function WebsiteProductPage({ params }: PageProps) {
                 {copy.scope.customCta}
                 <ArrowUpRight className="size-4" aria-hidden="true" />
               </a>
+              <div className="mt-8 max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025]">
+                <Image
+                  src="/images/ninja-faq.webp"
+                  alt=""
+                  width={1200}
+                  height={800}
+                  sizes="(min-width: 1280px) 486px, (min-width: 1024px) 40vw, (min-width: 640px) 512px, calc(100vw - 32px)"
+                  className="h-auto w-full"
+                />
+              </div>
             </SectionReveal>
             <div className="divide-y divide-white/10 border-t border-white/10">
               {copy.faq.items.map((item) => (
-                <details key={item.question} className="group py-5">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-sm leading-7 font-medium text-white/85 [&::-webkit-details-marker]:hidden">
-                    {item.question}
-                    <ChevronDown
-                      className="size-4 shrink-0 text-brand-cyan transition-transform group-open:rotate-180"
-                      aria-hidden="true"
-                    />
-                  </summary>
-                  <p className="mt-4 pr-8 text-sm leading-7 text-white/60">
-                    {item.answer}
-                  </p>
-                </details>
+                <WebsiteFaqItem
+                  key={item.question}
+                  question={item.question}
+                  answer={item.answer}
+                />
               ))}
             </div>
           </div>
