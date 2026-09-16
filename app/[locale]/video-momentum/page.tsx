@@ -141,7 +141,7 @@ const audioVisualCopy = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const copy = pageCopy[locale as keyof typeof pageCopy] ?? pageCopy.pt;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nja.marketing";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://njamarketing.com.br";
   const pageUrl = `${siteUrl}/${locale}/video-momentum`;
 
   return {

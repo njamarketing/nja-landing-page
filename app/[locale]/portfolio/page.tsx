@@ -526,7 +526,7 @@ const portfolioProjects = {
 export async function generateMetadata({ params }: PortfolioPageProps): Promise<Metadata> {
   const { locale } = await params;
   const copy = portfolioCopy[locale as keyof typeof portfolioCopy] ?? portfolioCopy.pt;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nja.marketing";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://njamarketing.com.br";
   const pageUrl = `${siteUrl}/${locale}/portfolio`;
   const languages = Object.fromEntries(
     routing.locales.map((availableLocale) => [

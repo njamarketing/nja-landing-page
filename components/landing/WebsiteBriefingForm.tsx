@@ -549,6 +549,14 @@ export default function WebsiteBriefingForm({
                 >
                   {t.privacy}
                 </a>
+                <a
+                  href={`/${locale}/terms-conditions`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 ml-5 inline-block text-xs text-white/55 underline underline-offset-4 transition hover:text-white"
+                >
+                  {locale === "en" ? "Terms and Conditions" : locale === "es" ? "Términos y Condiciones" : "Termos e Condições"}
+                </a>
               </>
             )}
             <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-white/8 pt-6">

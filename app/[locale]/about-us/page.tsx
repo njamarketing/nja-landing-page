@@ -108,7 +108,7 @@ const ctaCopy = {
 export async function generateMetadata({ params }: AboutPageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "AboutPage.seo" });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nja.marketing";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://njamarketing.com.br";
   const pageUrl = `${siteUrl}/${locale}/about-us`;
   const languages = Object.fromEntries(
     routing.locales.map((availableLocale) => [

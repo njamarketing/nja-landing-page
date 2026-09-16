@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TeixeiraDeFreitasFranchise from "@/components/franchises/TeixeiraDeFreitasFranchise";
+import FozDoIguacuHeadquarters from "@/components/franchises/FozDoIguacuHeadquarters";
 import Header from "@/components/layout/Header";
 import FounderPhotos from "@/components/franchises/FounderPhotos";
 import Link from "next/link";
@@ -17,10 +17,10 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://njamarketing.com.br";
-  const pageUrl = `${siteUrl}/${locale}/franquias/teixeira-de-freitas`;
-  const title = "Teixeira de Freitas | Franquia NJA";
+  const pageUrl = `${siteUrl}/${locale}/franquias/foz-do-iguacu`;
+  const title = "Foz do Iguaçu | Sede matriz NJA";
   const description =
-    "Conheça Igor Martins, sócio da NJA Consultoria & Marketing e responsável pela unidade de Teixeira de Freitas, na Bahia.";
+    "Conheça a sede matriz da NJA em Foz do Iguaçu, no Paraná, e Nelson Zeni Junior, fundador e CEO da empresa.";
 
   return {
     title,
@@ -30,7 +30,7 @@ export async function generateMetadata({
       languages: Object.fromEntries(
         routing.locales.map((availableLocale) => [
           availableLocale,
-          `${siteUrl}/${availableLocale}/franquias/teixeira-de-freitas`,
+          `${siteUrl}/${availableLocale}/franquias/foz-do-iguacu`,
         ]),
       ),
     },
@@ -46,7 +46,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function TeixeiraDeFreitasPage({ params }: PageProps) {
+export default async function FozDoIguacuPage({ params }: PageProps) {
   const { locale } = await params;
   const homeT = await getTranslations({ locale, namespace: "HomePage" });
 
@@ -78,11 +78,11 @@ export default async function TeixeiraDeFreitasPage({ params }: PageProps) {
         <div className="landing-grid-bg pointer-events-none absolute inset-0 opacity-35" />
         <div className="landing-orb landing-orb-top pointer-events-none" />
         <section
-          id="igor-martins"
+          id="nelson-zeni-junior"
           className="relative mx-auto max-w-7xl px-4 pt-32 pb-16 sm:px-6 sm:pt-40 md:pb-24"
         >
           <Link
-            href={`/${locale}/franquias#teixeira-de-freitas`}
+            href={`/${locale}/franquias#foz-do-iguacu`}
             className="text-sm text-cyan-200 underline underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4"
           >
             Voltar às franquias
@@ -91,44 +91,57 @@ export default async function TeixeiraDeFreitasPage({ params }: PageProps) {
             <SectionReveal>
               <div className="landing-pill">
                 <span className="landing-pill-dot" />
-                Franquia NJA na Bahia
+                Sede matriz NJA no Paraná
               </div>
               <h1 className="mt-6 text-5xl font-bold leading-tight text-white md:text-7xl">
-                Teixeira{" "}
-                <span className="landing-text-gradient">de Freitas</span>
+                Foz do <span className="landing-text-gradient">Iguaçu</span>
               </h1>
               <p className="mt-5 text-lg leading-8 text-white/72">
-                Conheça a unidade e quem lidera a atuação da NJA na região.
+                Conheça a sede onde a NJA nasceu e quem lidera essa história.
               </p>
               <h2 className="mt-8 text-3xl font-bold text-white">
-                Igor Martins
+                Nelson Zeni Junior
               </h2>
               <p className="mt-2 text-base font-medium text-cyan-200">
-                Sócio e responsável pela franquia de Teixeira de Freitas
+                Fundador e CEO da NJA
               </p>
               <p className="mt-6 text-xl leading-8 text-white/90">
-                Sócio da NJA Consultoria &amp; Marketing e especialista em
-                gestão de processos, posicionamento e crescimento orgânico de
-                marcas.
+                Estrategista de marketing e vendas, especialista em
+                posicionamento, performance e geração de resultados.
               </p>
               <p className="mt-6 text-base leading-8 text-white/72 md:text-lg">
-                Atua na organização de processos e no desenvolvimento
-                estratégico de negócios, com foco em fortalecer a presença das
-                empresas no mercado e direcionar seu crescimento.
+                Há mais de uma década, desenvolve estratégias de comunicação e
+                crescimento para empresas de diversos segmentos, conectando
+                posicionamento de marca aos objetivos de cada negócio.
               </p>
               <p className="mt-6 text-base leading-8 text-white/72 md:text-lg">
-                À frente da operação da NJA em Teixeira de Freitas, lidera
-                estratégias e ações voltadas ao desenvolvimento das marcas na
-                região, unindo organização, visão estratégica e foco em
-                resultados consistentes.
+                Com ampla experiência em negociação e gestão de negócios no
+                Brasil, na Argentina e no Paraguai, lidera projetos que unem
+                visão estratégica, criatividade e foco em resultados.
               </p>
             </SectionReveal>
             <SectionReveal direction="right">
-              <FounderPhotos />
+              <FounderPhotos
+                name="Nelson Zeni Junior"
+                photos={[
+                  {
+                    src: "/images/franquias/Nelson.webp",
+                    alt: "Nelson Zeni Junior, fundador e CEO da NJA",
+                    width: 788,
+                    height: 1280,
+                  },
+                  {
+                    src: "/images/franquias/Nelson-seat.webp",
+                    alt: "Nelson Zeni Junior em retrato sentado",
+                    width: 845,
+                    height: 1280,
+                  },
+                ]}
+              />
             </SectionReveal>
           </div>
         </section>
-        <TeixeiraDeFreitasFranchise locale={locale} profile />
+        <FozDoIguacuHeadquarters locale={locale} profile />
       </main>
       <LandingFooter
         locale={locale}

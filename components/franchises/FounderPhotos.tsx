@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const photos = [
+const igorPhotos = [
   {
     src: "/images/franquias/Igor-frente.webp",
     alt: "Igor Martins, responsável pela franquia NJA de Teixeira de Freitas",
@@ -15,7 +15,13 @@ const photos = [
   },
 ];
 
-export default function FounderPhotos() {
+export default function FounderPhotos({
+  name = "Igor Martins",
+  photos = igorPhotos,
+}: {
+  name?: string;
+  photos?: { src: string; alt: string; width?: number; height?: number }[];
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const container = useRef<HTMLDivElement>(null);
   const isVisible = useInView(container, { amount: 0.3 });
@@ -24,10 +30,10 @@ export default function FounderPhotos() {
   useEffect(() => {
     if (shouldReduceMotion || !isVisible) return;
     const intervalId = window.setInterval(() => {
-      setActiveIndex((currentIndex) => 1 - currentIndex);
+      setActiveIndex((currentIndex) => (currentIndex + 1) % photos.length);
     }, 4500);
     return () => window.clearInterval(intervalId);
-  }, [shouldReduceMotion, isVisible]);
+  }, [shouldReduceMotion, isVisible, photos.length]);
 
   return (
     <div ref={container} className="mx-auto w-full max-w-lg">
@@ -43,8 +49,8 @@ export default function FounderPhotos() {
               }}
               aria-label={
                 isActive
-                  ? "Foto de Igor Martins em destaque"
-                  : "Colocar esta foto de Igor Martins em destaque"
+                  ? `Foto de ${name} em destaque`
+                  : `Colocar esta foto de ${name} em destaque`
               }
               aria-pressed={isActive}
               initial={false}
@@ -65,8 +71,8 @@ export default function FounderPhotos() {
               <Image
                 src={photo.src}
                 alt={photo.alt}
-                width={4000}
-                height={6000}
+                width={photo.width ?? 4000}
+                height={photo.height ?? 6000}
                 sizes="(max-width: 640px) 85vw, (max-width: 1024px) 448px, 40vw"
                 className="h-auto w-full"
                 priority

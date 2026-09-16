@@ -1,6 +1,7 @@
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import type { Metadata } from "next";
 import TeixeiraDeFreitasFranchise from "@/components/franchises/TeixeiraDeFreitasFranchise";
+import FozDoIguacuHeadquarters from "@/components/franchises/FozDoIguacuHeadquarters";
 import Header from "@/components/layout/Header";
 import LandingCtaSection from "@/components/landing/LandingCtaSection";
 import LandingFooter from "@/components/landing/LandingFooter";
@@ -16,7 +17,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = await params;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nja.marketing";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://njamarketing.com.br";
   const pageUrl = `${siteUrl}/${locale}/franquias`;
   const title = "Franquias NJA | NJA Marketing";
   const description =
@@ -164,11 +165,12 @@ export default async function FranquiasPage({ params }: PageProps) {
             </div>
           </section>
 
+          <FozDoIguacuHeadquarters locale={locale} />
           <TeixeiraDeFreitasFranchise locale={locale} />
 
           <section className="relative py-20 pr-4 pl-16 sm:py-24 sm:pr-6 sm:pl-24 md:py-32 md:pr-6 md:pl-6">
             <div className="absolute top-20 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-blue-300/60 bg-[#061221] font-mono text-[10px] text-blue-100 shadow-[0_0_22px_rgba(35,91,215,0.45)] sm:left-8 md:left-1/2 md:-translate-x-1/2">
-              03
+              04
             </div>
             <div className="landing-divider landing-divider-blue" />
             <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">

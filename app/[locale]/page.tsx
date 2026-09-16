@@ -134,7 +134,7 @@ const trustedBrandsData: LogoItem[] = [
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "HomePage.seo" });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nja.marketing";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://njamarketing.com.br";
   const pageUrl = `${siteUrl}/${locale}`;
   const languages = Object.fromEntries(
     routing.locales.map((availableLocale) => [availableLocale, `${siteUrl}/${availableLocale}`])
@@ -166,7 +166,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "HomePage" });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nja.marketing";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://njamarketing.com.br";
   const pageUrl = `${siteUrl}/${locale}`;
   const heroCards = t.raw("hero.cards") as HeroCard[];
   const solutions = t.raw("solutions.items") as SolutionItem[];

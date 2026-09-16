@@ -23,6 +23,20 @@ messages/
 utils/
 ```
 
+## Sitemap e rastreamento
+
+- `/sitemap.xml`: lista as páginas com conteúdo nos três idiomas (`pt`, `en` e
+  `es`), com referências entre as versões traduzidas e português como padrão.
+- `/robots.txt`: permite o rastreamento e informa a URL absoluta do sitemap.
+- O domínio é definido por `NEXT_PUBLIC_SITE_URL`, com `https://njamarketing.com.br`
+  como padrão. Barras finais na configuração não geram URLs duplicadas.
+- Ao publicar uma nova página, atualize a lista de rotas em `app/sitemap.ts`.
+  Redirecionamentos, páginas de erro e a página de doações ainda sem conteúdo
+  não entram nessa lista. `lastModified` deve ser informado apenas quando houver
+  uma data real de atualização do conteúdo.
+- Após o deploy, envie a URL do sitemap ao Google Search Console e ao Bing
+  Webmaster Tools para facilitar a descoberta das páginas.
+
 ## Desenvolvimento
 
 Use Node.js 22 e npm. Se utilizar nvm, execute `nvm use` na raiz do projeto.
@@ -51,10 +65,10 @@ não cria o projeto nem conecta o GitHub sozinho.
    mantenha o **Output Directory** no padrão do framework.
 3. Defina `main` como **Production Branch** nas configurações do ambiente de
    produção e mantenha **Ignored Build Step** em **Automatic**.
-4. Se o domínio público for diferente de `https://nja.marketing`, configure
+4. Se o domínio público for diferente de `https://njamarketing.com.br`, configure
    `NEXT_PUBLIC_SITE_URL` com a URL completa em **Settings → Environment Variables**
    antes do build. Ela é usada nos metadados, sitemap e robots; quando ausente,
-   o projeto usa `https://nja.marketing`.
+   o projeto usa `https://njamarketing.com.br`.
 5. Envie estes arquivos de configuração ao GitHub e execute o primeiro deploy.
 
 Com a integração conectada:

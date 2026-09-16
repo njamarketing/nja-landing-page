@@ -4,7 +4,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/LenisProvider";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nja.marketing";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://njamarketing.com.br";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
 
@@ -22,8 +22,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: [{ url: "/svg/ico.svg", type: "image/svg+xml" }],
-    shortcut: ["/svg/ico.svg"],
+    icon: [{ url: "/svg/favicon.svg", type: "image/svg+xml", sizes: "any" }],
+    shortcut: ["/favicon.ico"],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
