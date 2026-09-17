@@ -96,7 +96,8 @@ uma chamada na seção de soluções. As URLs anteriores (`/{locale}/criacao-de-
 redirecionam permanentemente para a nova rota, preservando o idioma.
 
 O briefing tem três etapas, validação e revisão dos dados. Ao concluir, abre o
-WhatsApp da NJA configurado em `HomePage.footer.phone`, com a mensagem preenchida.
+WhatsApp da NJA no número +55 45 3523-0355, configurado na propriedade `phone` do
+formulário em `app/[locale]/website-creation/page.tsx`, com a mensagem preenchida.
 O cliente precisa tocar em **Enviar** no WhatsApp; um link `wa.me` não confirma
 nem realiza o envio sozinho. Ao voltar, ele confirma o envio e segue ao pagamento.
 Há opções para reabrir a conversa, copiar o briefing e editar os dados.
