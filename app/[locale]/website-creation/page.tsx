@@ -509,7 +509,7 @@ export default async function WebsiteProductPage({ params }: PageProps) {
             <WebsiteBriefingForm
               copy={copy}
               locale={locale}
-              phone="+55 45 3523-0355"
+              phone={WEBSITE_OFFER.phone}
               paymentUrl={paymentUrl}
             />
           </div>

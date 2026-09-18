@@ -1,4 +1,5 @@
 export const WEBSITE_OFFER = {
+  phone: "+55 45 3523-0355",
   development: "R$ 300,00",
   monthly: "R$ 99,90",
   delivery: "48h",

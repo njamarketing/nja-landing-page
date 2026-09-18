@@ -122,3 +122,20 @@ os textos dos três idiomas e a mensagem de WhatsApp coerentes.
 
 Execute `npm run test:website` para verificar a validação, a montagem da mensagem
 e a configuração do link de pagamento (Node.js 22).
+
+## Página para anúncios de sites
+
+Use `/pt/site-profissional` como destino dos anúncios de criação de sites.
+A página é independente do menu, não entra no sitemap e tem `noindex`.
+A campanha está em português; acessos com outro idioma redirecionam para `pt`,
+preservando os parâmetros da URL.
+
+Todos os botões de contratação abrem o WhatsApp do produto, definido em
+`WEBSITE_OFFER.phone` (`lib/website-briefing.ts`), com uma mensagem específica
+da campanha. O visitante precisa tocar em **Enviar** no WhatsApp. O contato
+fica também disponível em uma barra fixa no celular.
+
+Os valores usam a mesma oferta da página de produto. As avaliações vêm de
+`data/customer-feedback.json`. Os atributos `data-cta="website-whatsapp"` e
+`data-cta-placement` identificam os botões para uma futura configuração de
+mensuração; esta página não instala um Pixel da Meta nem registra conversões.
