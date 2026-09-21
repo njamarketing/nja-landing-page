@@ -21,12 +21,6 @@ type HeroCard = {
   offset?: string;
 };
 
-type TeamMember = {
-  image: string;
-  alt: string;
-  objectPosition?: string;
-};
-
 const sectionIds = {
   top: "top",
   cta: "cta",
@@ -44,6 +38,57 @@ const teamSubtitles = {
   en: "The people behind NJA's strategy, creative direction and execution every day.",
   es: "Las personas que sostienen la estrategia, la creación y la ejecución de NJA cada día.",
 } as const;
+
+const teamMembers = [
+  {
+    name: "Eduardo",
+    image: "/images/team/eduardo.webp",
+    roles: { pt: "Comercial", en: "Sales", es: "Comercial" },
+  },
+  {
+    name: "Nelson",
+    image: "/images/team/nelson.webp",
+    roles: { pt: "CEO", en: "CEO", es: "CEO" },
+  },
+  {
+    name: "Ana",
+    image: "/images/team/ana.webp",
+    roles: { pt: "Gerente geral", en: "General Manager", es: "Gerente general" },
+  },
+  {
+    name: "Marcela",
+    image: "/images/team/marcela.webp",
+    roles: { pt: "Copywriter", en: "Copywriter", es: "Copywriter" },
+  },
+  {
+    name: "Guilherme",
+    image: "/images/team/guilherme.webp",
+    roles: { pt: "Editor", en: "Editor", es: "Editor" },
+  },
+  {
+    name: "Michele",
+    image: "/images/team/michele.webp",
+    roles: { pt: "Arte-finalista", en: "Production Artist", es: "Artefinalista" },
+  },
+  {
+    name: "Bruna",
+    image: "/images/team/bruna.webp",
+    roles: {
+      pt: "Gestora de tráfego júnior",
+      en: "Junior Paid Media Manager",
+      es: "Gestora de tráfico júnior",
+    },
+  },
+  {
+    name: "Igor",
+    image: "/images/team/igor.webp",
+    roles: {
+      pt: "Franqueado em Teixeira de Freitas",
+      en: "Franchisee in Teixeira de Freitas",
+      es: "Franquiciado en Teixeira de Freitas",
+    },
+  },
+] as const;
 
 const aboutOverviewCopy = {
   pt: {
@@ -151,28 +196,10 @@ export default async function AboutPage({ params }: AboutPageProps) {
   const aboutOverview =
     aboutOverviewCopy[locale as keyof typeof aboutOverviewCopy] ?? aboutOverviewCopy.pt;
   const ctaSectionCopy = ctaCopy[locale as keyof typeof ctaCopy] ?? ctaCopy.pt;
-  const teamMembers: TeamMember[] = [
-    {
-      image: "/images/landing/about-team.jpg",
-      alt: "Colaborador da NJA",
-      objectPosition: "10% 38%",
-    },
-    {
-      image: "/images/landing/about-team.jpg",
-      alt: "Colaboradora da NJA",
-      objectPosition: "30% 34%",
-    },
-    {
-      image: "/images/landing/about-team.jpg",
-      alt: "Profissional da equipe NJA",
-      objectPosition: "52% 36%",
-    },
-    {
-      image: "/images/landing/about-team.jpg",
-      alt: "Integrante da equipe NJA",
-      objectPosition: "72% 34%",
-    },
-  ];
+  const localizedTeamMembers = teamMembers.map(({ roles, ...member }) => ({
+    ...member,
+    role: roles[locale as keyof typeof roles] ?? roles.pt,
+  }));
 
   return (
     <>
@@ -244,7 +271,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
             </div>
           </section>
 
-          <AboutTeamSection title={teamTitle} subtitle={teamSubtitle} members={teamMembers} />
+          <AboutTeamSection title={teamTitle} subtitle={teamSubtitle} members={localizedTeamMembers} />
 
           <LandingCtaSection
             sectionId={sectionIds.cta}

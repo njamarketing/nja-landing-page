@@ -6,9 +6,9 @@ import { useEffect, useState } from "react";
 import SectionReveal from "@/components/landing/SectionReveal";
 
 type TeamMember = {
+  name: string;
+  role: string;
   image: string;
-  alt: string;
-  objectPosition?: string;
 };
 
 type AboutTeamSectionProps = {
@@ -79,20 +79,19 @@ export default function AboutTeamSection({
   }, [emblaApi]);
 
   return (
-    <section className="relative overflow-x-clip overflow-y-visible px-4 py-24 sm:px-6 md:py-32">
+    <section aria-labelledby="about-team-title" className="relative overflow-x-clip overflow-y-visible px-4 py-24 sm:px-6 md:py-32">
       <div className="landing-orb landing-orb-left opacity-50" aria-hidden="true" />
       <div className="landing-orb landing-orb-right opacity-50" aria-hidden="true" />
 
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[minmax(18rem,24rem)_minmax(0,1fr)] lg:items-start lg:gap-10">
         <SectionReveal className="relative z-10" delay={0.06} distance={26}>
           <span className="landing-label">Equipe NJA</span>
-          <h2 className="mt-5 max-w-sm text-4xl leading-[1.02] font-bold text-white md:text-6xl">
+          <h2 id="about-team-title" className="mt-5 max-w-sm text-4xl leading-[1.02] font-bold text-white md:text-6xl">
             {title}
           </h2>
           <p className="mt-6 max-w-md text-base leading-7 text-white/64 md:text-lg">
             {subtitle}
           </p>
-
         </SectionReveal>
 
         <SectionReveal delay={0.12} distance={30} className="min-w-0">
@@ -103,11 +102,11 @@ export default function AboutTeamSection({
 
                 return (
                   <div
-                    key={`${member.alt}-${index}`}
+                    key={member.name}
                     className="min-w-0 flex-[0_0_82%] pr-4 sm:flex-[0_0_58%] lg:flex-[0_0_54%] xl:flex-[0_0_46%]"
                   >
                     <article
-                      className={`landing-panel landing-glass relative overflow-hidden rounded-[2rem] p-3 transition-all duration-500 ${
+                      className={`landing-panel landing-glass relative h-full overflow-hidden rounded-[2rem] p-3 transition-all duration-500 ${
                         isSelected
                           ? "border-brand-cyan/24 shadow-[0_24px_70px_rgba(62,229,250,0.12)] opacity-100"
                           : "opacity-72"
@@ -117,12 +116,17 @@ export default function AboutTeamSection({
                       <div className="relative aspect-[4/5] overflow-hidden rounded-[1.45rem] bg-white/5">
                         <Image
                           src={member.image}
-                          alt={member.alt}
+                          alt={`${member.name}, ${member.role} — NJA`}
                           fill
                           sizes="(min-width: 1280px) 28vw, (min-width: 1024px) 32vw, (min-width: 640px) 48vw, 78vw"
                           className="object-cover transition-transform duration-500 hover:scale-[1.03]"
-                          style={{ objectPosition: member.objectPosition ?? "center" }}
                         />
+                      </div>
+                      <div className="px-3 pt-5 pb-3">
+                        <h3 className="text-2xl font-bold text-white">{member.name}</h3>
+                        <p className="mt-2 min-h-12 text-sm leading-6 text-brand-cyan">
+                          {member.role}
+                        </p>
                       </div>
                     </article>
                   </div>
