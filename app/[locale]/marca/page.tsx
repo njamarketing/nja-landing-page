@@ -1,5 +1,6 @@
 import BrandShowcase from "@/components/landing/BrandShowcase";
 import ServiceLandingPage from "@/components/landing/ServiceLandingPage";
+import { brandShowcaseSlidesByLocale } from "@/data/brand-showcase";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 
@@ -128,54 +129,7 @@ const brandShowcaseCopy = {
         description: "Confiança em cada ponto de contato com a sua empresa.",
       },
     ],
-    slides: [
-      {
-        category: "Identidade de marca",
-        title: "JNL Turismo Receptivo",
-        description:
-          "Uma marca criada para transmitir presença, confiança e uma experiência memorável.",
-        image: "/images/logomarks/client-01.webp",
-      },
-      {
-        category: "Identidade de marca",
-        title: "Garra Atacadista",
-        description:
-          "Uma identidade criada para comunicar força, escala e presença no segmento atacadista.",
-        image: "/images/logomarks/client-02.webp",
-      },
-      {
-        category: "Identidade de marca",
-        title: "Doce Romã",
-        description:
-          "Uma identidade criada para comunicar qualidade, autoridade e presença no segmento gastronomico.",
-        image: "/images/logomarks/client-03.webp",
-      },
-      {
-        category: "Identidade de marca",
-        title: "Munck Castelli",
-        description:
-          "Uma identidade criada para comunicar força, tradição e experiência de mercado.",
-        image: "/images/logomarks/client-04.webp",
-      },
-      {
-        category: "Identidade de marca",
-        title: "Desafio",
-        description: "Uma identidade criada para comunicar simplicidade, praticidade e qualidade.",
-        image: "/images/logomarks/client-05.webp",
-      },
-      {
-        category: "Branding",
-        title: "Identidade que ganha espaço",
-        description: "Sistemas visuais pensados para criar reconhecimento em cada contato.",
-        image: "/images/landing/hero-branding.webp",
-      },
-      {
-        category: "Estratégia",
-        title: "Posicionamento com propósito",
-        description: "Direção para comunicar valor e crescer com consistência.",
-        image: "/images/landing/hero-consulting.webp",
-      },
-    ],
+    slides: brandShowcaseSlidesByLocale.pt,
   },
   en: {
     title: "Why should I build a brand?",
@@ -207,33 +161,7 @@ const brandShowcaseCopy = {
         description: "Trust at every touchpoint with your company.",
       },
     ],
-    slides: [
-      {
-        category: "Brand identity",
-        title: "JNL Turismo Receptivo",
-        description: "A brand created to convey presence, trust and a memorable experience.",
-        image: "/images/logomarks/client-01.webp",
-      },
-      {
-        category: "Brand identity",
-        title: "Garra Atacadista",
-        description:
-          "An identity created to communicate strength, scale and presence in the wholesale sector.",
-        image: "/images/logomarks/client-02.webp",
-      },
-      {
-        category: "Branding",
-        title: "An identity that stands out",
-        description: "Visual systems designed to build recognition at every touchpoint.",
-        image: "/images/landing/hero-branding.webp",
-      },
-      {
-        category: "Strategy",
-        title: "Purposeful positioning",
-        description: "Direction to communicate value and grow consistently.",
-        image: "/images/landing/hero-consulting.webp",
-      },
-    ],
+    slides: brandShowcaseSlidesByLocale.en,
   },
   es: {
     title: "¿Por qué crear una marca?",
@@ -265,34 +193,7 @@ const brandShowcaseCopy = {
         description: "Confianza en cada punto de contacto con tu empresa.",
       },
     ],
-    slides: [
-      {
-        category: "Identidad de marca",
-        title: "JNL Turismo Receptivo",
-        description:
-          "Una marca creada para transmitir presencia, confianza y una experiencia memorable.",
-        image: "/images/logomarks/client-01.webp",
-      },
-      {
-        category: "Identidad de marca",
-        title: "Garra Atacadista",
-        description:
-          "Una identidad creada para comunicar fuerza, escala y presencia en el sector mayorista.",
-        image: "/images/logomarks/client-02.webp",
-      },
-      {
-        category: "Branding",
-        title: "Una identidad que destaca",
-        description: "Sistemas visuales para construir reconocimiento en cada contacto.",
-        image: "/images/landing/hero-branding.webp",
-      },
-      {
-        category: "Estrategia",
-        title: "Posicionamiento con propósito",
-        description: "Dirección para comunicar valor y crecer con consistencia.",
-        image: "/images/landing/hero-consulting.webp",
-      },
-    ],
+    slides: brandShowcaseSlidesByLocale.es,
   },
 } as const;
 

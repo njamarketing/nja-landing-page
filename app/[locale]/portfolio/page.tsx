@@ -7,6 +7,7 @@ import PortfolioHeroSection from "@/components/landing/PortfolioHeroSection";
 import SectionReveal from "@/components/landing/SectionReveal";
 import VisualShowcaseScroll from "@/components/landing/VisualShowcaseScroll";
 import Header from "@/components/layout/Header";
+import { brandShowcaseSlidesByLocale } from "@/data/brand-showcase";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -17,16 +18,6 @@ type PortfolioPageProps = {
 
 type HeroCard = {
   label: string;
-  image: string;
-};
-
-type PortfolioProject = {
-  category: string;
-  title: string;
-  description: string;
-  services: readonly string[];
-  highlight: string;
-  highlightLabel: string;
   image: string;
 };
 
@@ -334,195 +325,6 @@ const portfolioCopy = {
   },
 } as const;
 
-const portfolioProjects = {
-  pt: [
-    {
-      category: "Presença local",
-      title: "Google Maps e autoridade regional",
-      description:
-        "Estrutura pensada para apresentar otimização local, reputação, visibilidade e geração de contatos com foco em negócios que dependem de tração regional.",
-      services: ["Google Maps", "Reputação", "Mídia local"],
-      highlight: "+visibilidade e intenção de contato",
-      highlightLabel: "Leitura principal",
-      image: "/images/landing/hero-maps.webp",
-    },
-    {
-      category: "Aquisição",
-      title: "Campanhas para leads e vendas",
-      description:
-        "Bloco preparado para reunir campanhas de Google Ads e Meta Ads com narrativa mais comercial, enfatizando captação, velocidade e previsibilidade.",
-      services: ["Google Ads", "Meta Ads", "Landing pages"],
-      highlight: "performance orientada a conversão",
-      highlightLabel: "Abordagem",
-      image: "/images/landing/hero-google-ads.jpg",
-    },
-    {
-      category: "Marca",
-      title: "Branding com clareza de posicionamento",
-      description:
-        "Espaço para contar projetos de identidade, direção visual e construção de mensagem com foco em percepção de valor e diferenciação.",
-      services: ["Branding", "Mensagem", "Direção visual"],
-      highlight: "coerência estética e verbal",
-      highlightLabel: "Entregável central",
-      image: "/images/landing/hero-branding.webp",
-    },
-    {
-      category: "Conteúdo",
-      title: "Presença digital e consistência editorial",
-      description:
-        "Card preparado para mostrar frentes de conteúdo, social media e desdobramentos visuais em uma leitura mais institucional.",
-      services: ["Social Media", "Conteúdo", "Planejamento"],
-      highlight: "ritmo de presença e autoridade",
-      highlightLabel: "Objetivo",
-      image: "/images/landing/hero-social.jpg",
-    },
-    {
-      category: "Orgânico",
-      title: "Crescimento via SEO e arquitetura de busca",
-      description:
-        "Estrutura ideal para detalhar melhorias técnicas, conteúdo e ganho de relevância para quem quer gerar demanda contínua.",
-      services: ["SEO", "Conteúdo", "Site"],
-      highlight: "tráfego qualificado no longo prazo",
-      highlightLabel: "Gancho estratégico",
-      image: "/images/landing/hero-seo.webp",
-    },
-    {
-      category: "Consultoria",
-      title: "Diagnóstico e direção para decisões melhores",
-      description:
-        "Espaço para apresentar análises, reestruturações e projetos em que a NJA entra para organizar prioridades e alinhar operação com crescimento.",
-      services: ["Consultoria", "Planejamento", "Integração"],
-      highlight: "clareza para evoluir a operação",
-      highlightLabel: "Valor percebido",
-      image: "/images/landing/hero-consulting.webp",
-    },
-  ],
-  en: [
-    {
-      category: "Local presence",
-      title: "Google Maps and regional authority",
-      description:
-        "A structure built to present local optimization, reputation, visibility and contact generation for businesses that rely on regional traction.",
-      services: ["Google Maps", "Reputation", "Local media"],
-      highlight: "visibility and contact intent",
-      highlightLabel: "Main angle",
-      image: "/images/landing/hero-maps.webp",
-    },
-    {
-      category: "Acquisition",
-      title: "Campaigns for leads and sales",
-      description:
-        "Prepared to gather Google Ads and Meta Ads projects with a stronger commercial narrative around speed, conversion and predictability.",
-      services: ["Google Ads", "Meta Ads", "Landing pages"],
-      highlight: "conversion-oriented performance",
-      highlightLabel: "Approach",
-      image: "/images/landing/hero-google-ads.jpg",
-    },
-    {
-      category: "Brand",
-      title: "Branding with sharper positioning",
-      description:
-        "Space to present identity, visual direction and messaging work focused on perceived value and differentiation.",
-      services: ["Branding", "Messaging", "Visual direction"],
-      highlight: "visual and verbal consistency",
-      highlightLabel: "Core delivery",
-      image: "/images/landing/hero-branding.webp",
-    },
-    {
-      category: "Content",
-      title: "Digital presence and editorial consistency",
-      description:
-        "A card ready to show content, social media and visual unfoldings through a stronger institutional lens.",
-      services: ["Social Media", "Content", "Planning"],
-      highlight: "presence and authority rhythm",
-      highlightLabel: "Goal",
-      image: "/images/landing/hero-social.jpg",
-    },
-    {
-      category: "Organic growth",
-      title: "SEO and search architecture",
-      description:
-        "Ideal for detailing technical improvements, content work and relevance gains for brands that want ongoing demand.",
-      services: ["SEO", "Content", "Website"],
-      highlight: "qualified long-term traffic",
-      highlightLabel: "Strategic hook",
-      image: "/images/landing/hero-seo.webp",
-    },
-    {
-      category: "Consulting",
-      title: "Diagnosis and direction for better decisions",
-      description:
-        "A section to present analyses, restructures and projects where NJA organizes priorities and aligns operations with growth.",
-      services: ["Consulting", "Planning", "Integration"],
-      highlight: "clarity for operational growth",
-      highlightLabel: "Perceived value",
-      image: "/images/landing/hero-consulting.webp",
-    },
-  ],
-  es: [
-    {
-      category: "Presencia local",
-      title: "Google Maps y autoridad regional",
-      description:
-        "Estructura pensada para presentar optimización local, reputación, visibilidad y generación de contactos para negocios que dependen del alcance regional.",
-      services: ["Google Maps", "Reputación", "Medios locales"],
-      highlight: "visibilidad e intención de contacto",
-      highlightLabel: "Lectura principal",
-      image: "/images/landing/hero-maps.webp",
-    },
-    {
-      category: "Adquisición",
-      title: "Campañas para leads y ventas",
-      description:
-        "Bloque preparado para reunir campañas de Google Ads y Meta Ads con una narrativa más comercial sobre velocidad, conversión y previsibilidad.",
-      services: ["Google Ads", "Meta Ads", "Landing pages"],
-      highlight: "performance orientado a conversión",
-      highlightLabel: "Enfoque",
-      image: "/images/landing/hero-google-ads.jpg",
-    },
-    {
-      category: "Marca",
-      title: "Branding con claridad de posicionamiento",
-      description:
-        "Espacio para contar proyectos de identidad, dirección visual y construcción de mensaje con foco en percepción de valor y diferenciación.",
-      services: ["Branding", "Mensaje", "Dirección visual"],
-      highlight: "coherencia estética y verbal",
-      highlightLabel: "Entrega central",
-      image: "/images/landing/hero-branding.webp",
-    },
-    {
-      category: "Contenido",
-      title: "Presencia digital y consistencia editorial",
-      description:
-        "Card preparado para mostrar contenido, social media y despliegues visuales en una lectura más institucional.",
-      services: ["Social Media", "Contenido", "Planificación"],
-      highlight: "ritmo de presencia y autoridad",
-      highlightLabel: "Objetivo",
-      image: "/images/landing/hero-social.jpg",
-    },
-    {
-      category: "Orgánico",
-      title: "Crecimiento vía SEO y arquitectura de búsqueda",
-      description:
-        "Estructura ideal para detallar mejoras técnicas, contenido y ganancia de relevancia para marcas que buscan demanda continua.",
-      services: ["SEO", "Contenido", "Sitio web"],
-      highlight: "tráfico calificado a largo plazo",
-      highlightLabel: "Gancho estratégico",
-      image: "/images/landing/hero-seo.webp",
-    },
-    {
-      category: "Consultoría",
-      title: "Diagnóstico y dirección para mejores decisiones",
-      description:
-        "Espacio para presentar análisis, reestructuraciones y proyectos donde NJA organiza prioridades y alinea la operación con el crecimiento.",
-      services: ["Consultoría", "Planificación", "Integración"],
-      highlight: "claridad para evolucionar la operación",
-      highlightLabel: "Valor percibido",
-      image: "/images/landing/hero-consulting.webp",
-    },
-  ],
-} as const;
-
 export async function generateMetadata({ params }: PortfolioPageProps): Promise<Metadata> {
   const { locale } = await params;
   const copy = portfolioCopy[locale as keyof typeof portfolioCopy] ?? portfolioCopy.pt;
@@ -561,8 +363,6 @@ export async function generateMetadata({ params }: PortfolioPageProps): Promise<
 export default async function PortfolioPage({ params }: PortfolioPageProps) {
   const { locale } = await params;
   const copy = portfolioCopy[locale as keyof typeof portfolioCopy] ?? portfolioCopy.pt;
-  const projects: readonly PortfolioProject[] =
-    portfolioProjects[locale as keyof typeof portfolioProjects] ?? portfolioProjects.pt;
   const homeT = await getTranslations({ locale, namespace: "HomePage" });
   const heroCards = homeT.raw("hero.cards") as HeroCard[];
   const feedbacks = homeT.raw("feedback.items") as FeedbackItem[];
@@ -592,30 +392,9 @@ export default async function PortfolioPage({ params }: PortfolioPageProps) {
   const brandNarrative =
     brandNarratives[locale as keyof typeof brandNarratives] ?? brandNarratives.pt;
   const audioVisual = audioVisualCopy[locale as keyof typeof audioVisualCopy] ?? audioVisualCopy.pt;
-  const brandShowcaseSlides = [
-    {
-      category: "Identidade de marca",
-      title: "JNL Turismo Receptivo",
-      description:
-        "Uma marca criada para transmitir presença, confiança e uma experiência memorável desde o primeiro contato.",
-      image: "/images/logomarks/client-01.webp",
-    },
-    {
-      category: "Identidade de marca",
-      title: "Garra Atacadista",
-      description:
-        "Uma identidade criada para comunicar força, escala e presença no segmento atacadista.",
-      image: "/images/logomarks/client-02.webp",
-    },
-    {
-      category: "Identidade de marca",
-      title: "Doce Romã",
-      description:
-        "Uma identidade criada para comunicar qualidade, autoridade e presença no segmento gastronomico.",
-      image: "/images/logomarks/client-03.webp",
-    },
-    ...projects,
-  ];
+  const brandShowcaseSlides =
+    brandShowcaseSlidesByLocale[locale as keyof typeof brandShowcaseSlidesByLocale] ??
+    brandShowcaseSlidesByLocale.pt;
 
   return (
     <>

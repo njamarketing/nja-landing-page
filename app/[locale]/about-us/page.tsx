@@ -41,19 +41,19 @@ const teamSubtitles = {
 
 const teamMembers = [
   {
-    name: "Eduardo",
-    image: "/images/team/eduardo.webp",
-    roles: { pt: "Comercial", en: "Sales", es: "Comercial" },
-  },
-  {
     name: "Nelson",
     image: "/images/team/nelson.webp",
     roles: { pt: "CEO", en: "CEO", es: "CEO" },
   },
   {
     name: "Ana",
-    image: "/images/team/ana.webp",
+    image: "/images/team/ana-gerente-geral.webp",
     roles: { pt: "Gerente geral", en: "General Manager", es: "Gerente general" },
+  },
+  {
+    name: "Eduardo",
+    image: "/images/team/eduardo.webp",
+    roles: { pt: "Comercial", en: "Sales", es: "Comercial" },
   },
   {
     name: "Marcela",
