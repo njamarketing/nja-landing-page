@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/marca",
     "/video-momentum",
     "/website-creation",
+    "/links",
     "/terms-conditions",
     "/privacy-policy",
     "/account-cancellation-policy",

@@ -123,6 +123,18 @@ os textos dos três idiomas e a mensagem de WhatsApp coerentes.
 Execute `npm run test:website` para verificar a validação, a montagem da mensagem
 e a configuração do link de pagamento (Node.js 22).
 
+## Central de links
+
+A página `/pt/links` reúne a oferta de criação de sites, os contatos por setor,
+a unidade da Bahia, os materiais e as redes sociais da NJA. Há versões em
+`/en/links` e `/es/links`, incluídas no sitemap. `/links` segue o redirecionamento
+por idioma do site; use `/pt/links` para compartilhar a versão em português.
+
+Os destinos e textos ficam em `data/links-page.ts`. Os contatos e links de
+pagamento foram preservados do HTML de referência; o preço do site e a
+mensalidade vêm de `WEBSITE_OFFER` em `lib/website-briefing.ts`. Os links externos
+abrem em uma nova aba e os links internos mantêm o idioma selecionado.
+
 ## Página para anúncios de sites
 
 Use `/pt/site-profissional` como destino dos anúncios de criação de sites.
