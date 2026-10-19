@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "qGsNeGSw7MMRx90wBvfUdoOvFOZbjVjxs83JtNMWsOM",
+  },
   icons: {
     icon: [{ url: "/svg/favicon.svg", type: "image/svg+xml", sizes: "any" }],
     shortcut: ["/favicon.ico"],
